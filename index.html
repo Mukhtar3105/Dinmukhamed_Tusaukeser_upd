@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f4ead6">
-  <title>Дінмұхамед — тұсаукесер және анамыздың зейнетке шығу тойы</title>
+  <meta name="theme-color" content="#f4e7bd">
+  <title>Дінмұхамед — Тұсау кесер және анамыздың зейнетке шығу тойы</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -678,6 +678,1108 @@
         scroll-behavior:auto!important;
       }
     }
+    /* ===== Client revision: brighter, more festive ===== */
+    :root{
+      --cream:#fff3cf !important;
+      --cream2:#ffe4a5 !important;
+      --paper:#fff9e9 !important;
+      --ink:#4b2f22 !important;
+      --muted:#7d553f !important;
+      --terracotta:#d45525 !important;
+      --terracotta2:#f1782f !important;
+      --amber:#f0a91d !important;
+      --amber2:#ffd465 !important;
+      --sand:#f4d698 !important;
+      --green:#496f35 !important;
+      --green2:#7fa143 !important;
+      --line:rgba(214,107,35,.24) !important;
+      --card:rgba(255,251,231,.97) !important;
+    }
+
+    body{
+      background:
+        radial-gradient(900px 560px at 0% 0%,rgba(255,181,42,.36),transparent 58%),
+        radial-gradient(820px 580px at 100% 10%,rgba(224,73,31,.20),transparent 60%),
+        radial-gradient(760px 520px at 50% 90%,rgba(106,142,54,.15),transparent 62%),
+        linear-gradient(180deg,#fff2c8 0%,#ffe8b2 42%,#f7dd9d 100%) !important;
+    }
+
+    body::before{
+      opacity:.105 !important;
+      background-image:
+        radial-gradient(circle at 14px 14px,rgba(197,86,34,.34) 0 1.7px,transparent 2px),
+        linear-gradient(45deg,transparent 48%,rgba(209,104,31,.20) 49%,rgba(209,104,31,.20) 51%,transparent 52%) !important;
+    }
+
+    section.card{
+      border:1px solid rgba(211,105,36,.26) !important;
+      background:
+        radial-gradient(620px 180px at 50% 0%,rgba(255,197,73,.16),transparent 72%),
+        linear-gradient(180deg,rgba(255,253,235,.99),rgba(255,244,212,.97)) !important;
+      box-shadow:0 18px 42px rgba(121,70,28,.15) !important;
+    }
+
+    .language-gate{
+      background:
+        radial-gradient(circle at 50% 12%,rgba(255,191,52,.48),transparent 36%),
+        radial-gradient(circle at 10% 88%,rgba(83,128,51,.17),transparent 30%),
+        linear-gradient(180deg,#fff2c6,#f5d995) !important;
+    }
+
+    .language-card{
+      border-color:rgba(218,111,36,.26) !important;
+      background:rgba(255,251,230,.97) !important;
+    }
+
+    .language-btn,
+    .music-fab button,
+    .primary-btn,
+    .mapbtn{
+      background:linear-gradient(135deg,#cf4a23,#f08a2f 55%,#f3b632) !important;
+      box-shadow:0 12px 28px rgba(195,83,29,.26) !important;
+    }
+
+    .lang-switch button.active{
+      background:linear-gradient(135deg,#c84924,#ed7d2f) !important;
+    }
+
+    .hero{
+      background:
+        radial-gradient(circle at 50% 6%,rgba(255,195,54,.39),transparent 33%),
+        radial-gradient(circle at 8% 74%,rgba(94,132,50,.16),transparent 28%),
+        radial-gradient(circle at 92% 70%,rgba(213,70,34,.12),transparent 26%),
+        linear-gradient(180deg,#fff7db 0%,#fff0c1 57%,#f9dfa0 100%) !important;
+    }
+
+    .asset,
+    .card-decor,
+    .divider-art,
+    .hero-shanyrak{
+      filter:saturate(1.20) contrast(1.03) brightness(1.04) drop-shadow(0 7px 12px rgba(116,66,26,.08)) !important;
+    }
+
+    .hero-cloud1{opacity:.72 !important}
+    .hero-cloud2{opacity:.56 !important}
+    .hero-wave{opacity:.46 !important}
+    .hero-mountains{opacity:.82 !important;filter:saturate(1.22) brightness(1.04) !important}
+    .hero-sun{opacity:1 !important;width:108px !important}
+    .hero-eagle{opacity:.93 !important;width:180px !important}
+
+    .child-name{
+      background:linear-gradient(135deg,#b73721,#e55d28 45%,#ee952c 100%) !important;
+      -webkit-background-clip:text !important;
+      background-clip:text !important;
+      color:transparent !important;
+      filter:drop-shadow(0 4px 10px rgba(168,67,28,.10));
+    }
+
+    .hero-kicker{
+      color:#8d4e2f !important;
+      letter-spacing:.18em !important;
+    }
+
+    .tusau-wrap{
+      width:min(500px,92%);
+      margin:8px auto 2px;
+      padding:16px 18px 18px;
+      border-radius:24px;
+      border:1px solid rgba(211,101,31,.24);
+      background:
+        radial-gradient(circle at 50% -20%,rgba(255,211,91,.50),transparent 58%),
+        linear-gradient(135deg,rgba(255,247,215,.98),rgba(255,221,132,.92));
+      box-shadow:0 15px 34px rgba(157,82,28,.14);
+      position:relative;
+      overflow:hidden;
+    }
+    .tusau-wrap::before,
+    .tusau-wrap::after{
+      content:"";
+      position:absolute;
+      top:50%;
+      width:68px;
+      height:36px;
+      opacity:.20;
+      background:url('./2_photo (2).png') center/contain no-repeat;
+      transform:translateY(-50%);
+    }
+    .tusau-wrap::before{left:-10px}
+    .tusau-wrap::after{right:-10px;transform:translateY(-50%) scaleX(-1)}
+    .tusau-eyebrow{
+      display:block;
+      margin-bottom:3px;
+      color:#9d5732;
+      font-size:10px;
+      letter-spacing:.24em;
+      font-weight:800;
+    }
+    .tusau{
+      font:800 clamp(34px,9vw,52px) "Noto Serif",serif !important;
+      color:#bd3e22 !important;
+      line-height:1.04 !important;
+      text-shadow:0 5px 14px rgba(178,70,29,.10);
+    }
+
+    .and{
+      color:#9c633e !important;
+      font-weight:700 !important;
+      margin:12px 0 8px !important;
+    }
+
+    .hero-title{
+      color:#5f3828 !important;
+      font-weight:700 !important;
+    }
+
+    .quote{
+      background:linear-gradient(135deg,rgba(255,226,132,.82),rgba(255,245,210,.90)) !important;
+      border-color:rgba(213,104,30,.24) !important;
+      color:#8a4a2c !important;
+    }
+
+    .section-title{
+      color:#643725 !important;
+      text-shadow:0 3px 10px rgba(148,72,28,.06);
+    }
+
+    .em{
+      color:#c24522 !important;
+    }
+
+    .blessing{
+      background:linear-gradient(135deg,rgba(255,226,140,.70),rgba(255,242,204,.82)) !important;
+      border-color:rgba(211,100,31,.21) !important;
+    }
+
+    .detail{
+      border-color:rgba(211,104,35,.22) !important;
+      background:
+        radial-gradient(circle at 50% 0%,rgba(255,202,73,.18),transparent 64%),
+        rgba(255,249,221,.92) !important;
+    }
+
+    .detail.dress{
+      background:
+        radial-gradient(circle at 50% 0%,rgba(255,194,45,.28),transparent 65%),
+        linear-gradient(135deg,rgba(255,240,186,.98),rgba(255,222,133,.90)) !important;
+      border-color:rgba(210,92,29,.28) !important;
+    }
+
+    .detail.dress .detail-main{
+      color:#b53d22 !important;
+      font-size:29px !important;
+    }
+
+    .calendar{
+      border-color:rgba(210,102,32,.22) !important;
+      background:rgba(255,248,219,.92) !important;
+    }
+
+    .cal-head{
+      color:#6e3d27 !important;
+      background:linear-gradient(90deg,rgba(255,215,103,.48),rgba(255,236,171,.56),rgba(255,215,103,.48)) !important;
+    }
+
+    .grid .selected::before{
+      background:rgba(227,81,34,.20) !important;
+      border-color:rgba(227,81,34,.34) !important;
+    }
+
+    .number{
+      background:linear-gradient(135deg,#c83f21,#ee6f2a 56%,#f2b331) !important;
+      box-shadow:0 12px 23px rgba(174,69,26,.22) !important;
+    }
+
+    .radio{
+      background:rgba(255,248,220,.90) !important;
+      border-color:rgba(206,102,38,.19) !important;
+    }
+
+    .radio:has(input:checked){
+      background:linear-gradient(90deg,rgba(255,219,122,.76),rgba(255,239,193,.86)) !important;
+      border-color:rgba(213,83,30,.32) !important;
+    }
+
+    .input{
+      background:rgba(255,252,233,.94) !important;
+      border-color:rgba(199,98,35,.24) !important;
+    }
+
+    .card-decor{opacity:.30 !important}
+    .decor-sun{opacity:.38 !important}
+    .decor-bird{opacity:.24 !important}
+    .decor-mountains{opacity:.22 !important}
+    .decor-wave{opacity:.30 !important}
+    .decor-shanyrak{opacity:.12 !important}
+    .decor-ornament-band{opacity:.38 !important}
+    .decor-divider-left,.decor-divider-right{opacity:.22 !important}
+
+    .section-chip{
+      color:#9a4e2c !important;
+      border-color:rgba(212,94,28,.23) !important;
+      background:rgba(255,226,136,.62) !important;
+    }
+
+    @media(max-width:520px){
+      .hero-eagle{width:140px !important}
+      .hero-sun{width:82px !important}
+      .tusau-wrap{padding:14px 12px 16px}
+      .tusau{font-size:clamp(31px,10vw,42px) !important}
+    }
+
+  
+    /* ===== Ornament-focused revision (no dress code) ===== */
+    .ornament-copy{
+      margin-top:22px;
+      padding:16px 18px 18px;
+      border-radius:22px;
+      background:
+        radial-gradient(circle at 50% 0%,rgba(255,206,95,.22),transparent 70%),
+        linear-gradient(135deg,rgba(255,250,236,.96),rgba(255,236,193,.92));
+      border:1px solid rgba(206,102,38,.18);
+      text-align:center;
+      box-shadow:0 10px 24px rgba(121,70,28,.07);
+    }
+    .ornament-copy-title{
+      font:700 24px/1.2 "Noto Serif", serif;
+      color:#8d472a;
+      margin-bottom:8px;
+    }
+    .ornament-copy-text{
+      color:#7a5441;
+      font-size:15px;
+      line-height:1.72;
+      max-width:740px;
+      margin:0 auto;
+    }
+    .ornament-showcase{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    .ornament-item{
+      position:relative;
+      border-radius:24px;
+      border:1px solid rgba(206,102,38,.18);
+      background:
+        radial-gradient(circle at 50% 0%,rgba(255,202,86,.18),transparent 70%),
+        rgba(255,251,238,.95);
+      box-shadow:0 14px 28px rgba(121,70,28,.08);
+      min-height:168px;
+      padding:18px 12px 14px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+    }
+    .ornament-item::before{
+      content:"";
+      position:absolute;
+      inset:auto 10px 8px 10px;
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,101,33,.22),transparent);
+    }
+    .ornament-item img{
+      max-width:84%;
+      max-height:110px;
+      object-fit:contain;
+      filter:drop-shadow(0 7px 12px rgba(125,76,30,.10)) saturate(1.08);
+    }
+    .ornament-item.wide{
+      grid-column:span 3;
+      min-height:220px;
+    }
+    .ornament-item.wide img{
+      max-width:230px;
+      max-height:170px;
+    }
+    .ornament-item span{
+      margin-top:10px;
+      font-size:14px;
+      font-weight:700;
+      color:#8b502f;
+      text-align:center;
+      letter-spacing:.02em;
+    }
+
+    .decor-extra-sun{
+      right:28px;
+      top:86px;
+      width:96px;
+      opacity:.28;
+    }
+    .decor-extra-eagle{
+      left:24px;
+      bottom:48px;
+      width:146px;
+      opacity:.14;
+      transform:rotate(-8deg);
+    }
+    .decor-extra-cloud{
+      left:10px;
+      top:82px;
+      width:140px;
+      opacity:.24;
+    }
+    .decor-extra-cloud2{
+      right:16px;
+      bottom:92px;
+      width:156px;
+      opacity:.18;
+      transform:scaleX(-1);
+    }
+    .decor-extra-side-orn{
+      right:-18px;
+      top:136px;
+      width:168px;
+      opacity:.18;
+      transform:rotate(-90deg);
+    }
+    .decor-extra-bottom-band{
+      left:50%;
+      bottom:8px;
+      transform:translateX(-50%);
+      width:min(86%,560px);
+      opacity:.26;
+    }
+    .decor-extra-mini-eagle{
+      right:18px;
+      top:120px;
+      width:118px;
+      opacity:.12;
+      transform:rotate(8deg);
+    }
+
+    @media (max-width: 760px){
+      .ornament-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .ornament-item.wide{grid-column:span 2}
+    }
+    @media (max-width: 520px){
+      .ornament-showcase{grid-template-columns:1fr}
+      .ornament-item.wide{grid-column:span 1}
+      .ornament-item{min-height:150px}
+      .ornament-item.wide{min-height:180px}
+      .ornament-item img{max-height:96px}
+      .ornament-item.wide img{max-width:190px;max-height:138px}
+    }
+
+  
+    /* ===== Softer harmonious palette ===== */
+    :root{
+      --cream:#f7f0e2 !important;
+      --cream2:#eee1cc !important;
+      --paper:#fbf7ef !important;
+      --ink:#514238 !important;
+      --muted:#7d6c60 !important;
+      --terracotta:#a86847 !important;
+      --terracotta2:#bd7a55 !important;
+      --amber:#c9a065 !important;
+      --amber2:#ddc08e !important;
+      --sand:#e5d3b8 !important;
+      --green:#6f7757 !important;
+      --green2:#8a9270 !important;
+      --line:rgba(130,99,74,.14) !important;
+      --card:rgba(252,248,240,.96) !important;
+      --shadow:0 20px 50px rgba(83,64,49,.10) !important;
+      --shadow-soft:0 12px 28px rgba(83,64,49,.07) !important;
+    }
+
+    body{
+      background:
+        radial-gradient(900px 560px at 0% 0%,rgba(205,178,132,.14),transparent 62%),
+        radial-gradient(820px 580px at 100% 12%,rgba(167,108,75,.08),transparent 62%),
+        radial-gradient(760px 520px at 50% 92%,rgba(112,122,85,.07),transparent 62%),
+        linear-gradient(180deg,#f7f0e2 0%,#f3e9d8 46%,#eee1cc 100%) !important;
+    }
+
+    body::before{
+      opacity:.045 !important;
+    }
+
+    section.card{
+      border-color:rgba(129,97,72,.13) !important;
+      background:
+        linear-gradient(180deg,rgba(253,250,244,.98),rgba(249,244,235,.96)) !important;
+      box-shadow:0 14px 34px rgba(82,63,48,.08) !important;
+    }
+
+    section.card:hover{
+      box-shadow:0 18px 42px rgba(82,63,48,.10) !important;
+    }
+
+    .language-gate{
+      background:
+        radial-gradient(circle at 50% 14%,rgba(207,180,134,.20),transparent 38%),
+        linear-gradient(180deg,#f7efe0,#ede0ca) !important;
+    }
+
+    .language-card{
+      background:rgba(252,248,240,.97) !important;
+      border-color:rgba(132,97,71,.14) !important;
+      box-shadow:0 24px 70px rgba(84,63,47,.12) !important;
+    }
+
+    .language-btn,
+    .music-fab button,
+    .primary-btn,
+    .mapbtn{
+      background:linear-gradient(135deg,#936247,#b57a56) !important;
+      box-shadow:0 9px 20px rgba(111,76,55,.14) !important;
+    }
+
+    .lang-switch button.active{
+      background:#a36d4d !important;
+    }
+
+    .hero{
+      background:
+        radial-gradient(circle at 50% 8%,rgba(220,195,150,.18),transparent 35%),
+        linear-gradient(180deg,#fbf7ef 0%,#f6eedf 58%,#eee2cf 100%) !important;
+    }
+
+    .hero-mountains{
+      opacity:.52 !important;
+      filter:saturate(.72) brightness(1.02) !important;
+    }
+    .hero-cloud1{opacity:.38 !important}
+    .hero-cloud2{opacity:.26 !important}
+    .hero-wave{opacity:.22 !important}
+    .hero-sun{
+      opacity:.72 !important;
+      filter:saturate(.72) brightness(1.05) !important;
+    }
+    .hero-eagle{
+      opacity:.60 !important;
+      filter:saturate(.68) brightness(.98) !important;
+    }
+
+    .asset,
+    .card-decor,
+    .divider-art,
+    .hero-shanyrak{
+      filter:saturate(.72) contrast(.98) brightness(1.02) drop-shadow(0 5px 9px rgba(77,60,47,.05)) !important;
+    }
+
+    .hero-shanyrak{
+      filter:saturate(.76) brightness(1.00) drop-shadow(0 10px 18px rgba(117,73,42,.09)) !important;
+    }
+
+    .child-name{
+      background:linear-gradient(135deg,#795343,#a86f50 78%) !important;
+      -webkit-background-clip:text !important;
+      background-clip:text !important;
+      color:transparent !important;
+      filter:none !important;
+    }
+
+    .hero-kicker,
+    .tusau-eyebrow{
+      color:#876957 !important;
+    }
+
+    .tusau-wrap{
+      background:
+        linear-gradient(135deg,rgba(250,245,235,.98),rgba(239,225,203,.88)) !important;
+      border-color:rgba(145,101,74,.15) !important;
+      box-shadow:0 10px 24px rgba(91,67,50,.07) !important;
+    }
+
+    .tusau{
+      color:#8e5d45 !important;
+      text-shadow:none !important;
+    }
+
+    .hero-title,
+    .section-title{
+      color:#5e493d !important;
+      text-shadow:none !important;
+    }
+
+    .quote{
+      background:rgba(244,235,220,.82) !important;
+      border-color:rgba(138,102,76,.13) !important;
+      color:#715a4d !important;
+    }
+
+    .em{
+      color:#8d5b43 !important;
+    }
+
+    .blessing{
+      background:rgba(239,228,209,.56) !important;
+      border-color:rgba(139,104,78,.12) !important;
+      color:#685448 !important;
+    }
+
+    .detail,
+    .detail.dress{
+      background:rgba(250,246,238,.90) !important;
+      border-color:rgba(135,102,76,.13) !important;
+    }
+
+    .detail.dress .detail-main{
+      color:#785443 !important;
+    }
+
+    .calendar{
+      background:rgba(250,246,238,.88) !important;
+      border-color:rgba(135,102,76,.12) !important;
+    }
+
+    .cal-head{
+      background:rgba(231,218,198,.52) !important;
+      color:#665044 !important;
+    }
+
+    .grid .selected::before{
+      background:rgba(160,105,72,.12) !important;
+      border-color:rgba(160,105,72,.20) !important;
+    }
+
+    .number{
+      background:linear-gradient(135deg,#8f6149,#b17b59) !important;
+      box-shadow:0 8px 16px rgba(99,70,52,.10) !important;
+    }
+
+    .radio{
+      background:rgba(251,247,239,.90) !important;
+      border-color:rgba(135,102,76,.12) !important;
+    }
+
+    .radio:has(input:checked){
+      background:rgba(235,225,209,.70) !important;
+      border-color:rgba(150,105,77,.18) !important;
+    }
+
+    .input{
+      background:rgba(252,249,243,.95) !important;
+      border-color:rgba(135,102,76,.14) !important;
+    }
+
+    .section-chip{
+      color:#765a49 !important;
+      border-color:rgba(137,101,74,.12) !important;
+      background:rgba(239,230,215,.62) !important;
+    }
+
+    .ornament-copy{
+      background:
+        linear-gradient(135deg,rgba(250,246,238,.96),rgba(238,226,207,.80)) !important;
+      border-color:rgba(136,100,74,.12) !important;
+      box-shadow:0 8px 18px rgba(79,60,46,.05) !important;
+    }
+
+    .ornament-copy-title{
+      color:#725443 !important;
+    }
+
+    .ornament-copy-text{
+      color:#756256 !important;
+    }
+
+    .ornament-item{
+      background:
+        linear-gradient(180deg,rgba(252,249,243,.96),rgba(244,236,224,.90)) !important;
+      border-color:rgba(135,102,76,.11) !important;
+      box-shadow:0 10px 22px rgba(79,60,46,.06) !important;
+    }
+
+    .ornament-item img{
+      filter:saturate(.70) brightness(1.02) drop-shadow(0 5px 9px rgba(77,60,47,.05)) !important;
+    }
+
+    .ornament-item span{
+      color:#725747 !important;
+    }
+
+    .card-decor{
+      opacity:.12 !important;
+    }
+
+    .decor-sun{opacity:.18 !important}
+    .decor-bird{opacity:.10 !important}
+    .decor-mountains{opacity:.11 !important}
+    .decor-wave{opacity:.13 !important}
+    .decor-shanyrak{opacity:.055 !important}
+    .decor-ornament-band{opacity:.18 !important}
+    .decor-divider-left,
+    .decor-divider-right{opacity:.10 !important}
+
+    .decor-extra-sun{opacity:.14 !important}
+    .decor-extra-eagle{opacity:.07 !important}
+    .decor-extra-cloud,
+    .decor-extra-cloud2{opacity:.10 !important}
+    .decor-extra-side-orn{opacity:.08 !important}
+    .decor-extra-bottom-band{opacity:.15 !important}
+    .decor-extra-mini-eagle{opacity:.055 !important}
+
+    .music-fab,
+    .lang-switch{
+      background:rgba(251,248,242,.94) !important;
+      border-color:rgba(130,97,72,.12) !important;
+      box-shadow:0 10px 24px rgba(77,59,46,.08) !important;
+    }
+
+  
+    /* ===== Sunny reference update (based on the provided warm illustration) ===== */
+    :root{
+      --cream:#f8f1d6 !important;
+      --cream2:#f0e2b8 !important;
+      --paper:#fff8ea !important;
+      --ink:#554234 !important;
+      --muted:#7f6957 !important;
+      --terracotta:#b96542 !important;
+      --terracotta2:#d78550 !important;
+      --amber:#d8a84a !important;
+      --amber2:#efc96b !important;
+      --sand:#ead7ad !important;
+      --green:#738555 !important;
+      --green2:#97a96b !important;
+      --line:rgba(152,108,67,.15) !important;
+      --card:rgba(255,250,241,.94) !important;
+      --shadow:0 20px 54px rgba(109,76,47,.12) !important;
+      --shadow-soft:0 12px 28px rgba(109,76,47,.08) !important;
+    }
+
+    body{
+      background:
+        radial-gradient(980px 560px at 50% -6%,rgba(255,214,92,.34),transparent 43%),
+        radial-gradient(700px 420px at 12% 6%,rgba(110,189,229,.10),transparent 35%),
+        radial-gradient(760px 430px at 88% 10%,rgba(82,180,226,.10),transparent 36%),
+        linear-gradient(180deg,#f7efcf 0%,#f4e8c5 38%,#ecddb6 100%) !important;
+    }
+
+    body::before{
+      opacity:.038 !important;
+      background-image:
+        radial-gradient(circle at 14px 14px,rgba(176,124,74,.22) 0 1.35px,transparent 2px),
+        linear-gradient(45deg,transparent 48%,rgba(192,147,94,.09) 49%,rgba(192,147,94,.09) 51%,transparent 52%) !important;
+      background-size:82px 82px !important;
+    }
+
+    .language-gate{
+      background:
+        radial-gradient(circle at 50% 14%,rgba(255,217,99,.32),transparent 32%),
+        radial-gradient(circle at 12% 18%,rgba(112,190,228,.10),transparent 24%),
+        radial-gradient(circle at 88% 16%,rgba(112,190,228,.10),transparent 24%),
+        linear-gradient(180deg,#f8f0d1,#eee0b7) !important;
+    }
+
+    .language-card{
+      background:
+        linear-gradient(180deg,rgba(255,251,243,.97),rgba(252,245,229,.95)) !important;
+      box-shadow:0 28px 72px rgba(110,79,50,.13) !important;
+    }
+
+    section.card{
+      background:
+        linear-gradient(180deg,rgba(255,252,246,.98),rgba(250,242,224,.95)) !important;
+      border-color:rgba(152,108,67,.14) !important;
+      box-shadow:0 10px 28px rgba(104,74,47,.08) !important;
+    }
+
+    .hero{
+      position:relative;
+      min-height:800px !important;
+      background:
+        radial-gradient(circle at 50% 8%,rgba(255,219,103,.30),transparent 30%),
+        linear-gradient(180deg,rgba(251,243,216,.99),rgba(246,235,203,.98) 56%,rgba(240,225,185,.98)) !important;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      background:
+        url('./1_photo.png') center bottom / 120% auto no-repeat,
+        radial-gradient(820px 280px at 50% 100%,rgba(126,160,92,.20),transparent 60%);
+      opacity:.14;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      left:-6%;
+      right:-6%;
+      bottom:78px;
+      height:150px;
+      pointer-events:none;
+      z-index:0;
+      background:
+        linear-gradient(to top,rgba(236,222,184,.00),rgba(236,222,184,.00)),
+        url('./4_photo (2).png') center bottom / 102% auto no-repeat;
+      opacity:.22;
+      filter:saturate(.95) brightness(1.07);
+    }
+
+    .hero .inner{
+      position:relative;
+      z-index:2;
+      padding-top:40px !important;
+      padding-bottom:44px !important;
+    }
+
+    .hero-cloud1{
+      left:-8px !important;
+      top:42px !important;
+      width:200px !important;
+      opacity:.72 !important;
+      filter:saturate(.90) brightness(1.06) !important;
+    }
+
+    .hero-cloud2{
+      right:-8px !important;
+      top:112px !important;
+      width:236px !important;
+      opacity:.62 !important;
+      filter:saturate(.94) brightness(1.04) !important;
+    }
+
+    .hero-wave{
+      left:-1% !important;
+      width:102% !important;
+      bottom:96px !important;
+      opacity:.32 !important;
+      filter:saturate(.88) brightness(1.08) !important;
+    }
+
+    .hero-sun{
+      right:34px !important;
+      top:52px !important;
+      width:102px !important;
+      opacity:.96 !important;
+      filter:saturate(.96) brightness(1.08) drop-shadow(0 8px 16px rgba(233,177,66,.18)) !important;
+    }
+
+    .hero-eagle{
+      right:58px !important;
+      top:154px !important;
+      width:168px !important;
+      opacity:.80 !important;
+      filter:saturate(.90) brightness(1.02) !important;
+    }
+
+    .hero-mountains{
+      left:0 !important;
+      right:0 !important;
+      bottom:0 !important;
+      width:100% !important;
+      opacity:.30 !important;
+      filter:saturate(.86) brightness(1.02) !important;
+    }
+
+    .hero-photo-wrap{
+      background:
+        radial-gradient(circle at 50% 50%,rgba(255,253,248,.98),rgba(244,229,193,.88)) !important;
+      box-shadow:
+        0 18px 34px rgba(109,76,47,.10),
+        inset 0 0 0 1px rgba(219,189,127,.26) !important;
+    }
+
+    .hero-shanyrak{
+      filter:saturate(.98) brightness(1.04) drop-shadow(0 10px 18px rgba(161,88,46,.13)) !important;
+      opacity:1 !important;
+    }
+
+    .hero-kicker,
+    .tusau-eyebrow{
+      color:#8a6847 !important;
+      letter-spacing:.18em !important;
+    }
+
+    .child-name{
+      background:linear-gradient(135deg,#9f5836,#d28a54 70%,#b16240) !important;
+      -webkit-background-clip:text !important;
+      background-clip:text !important;
+      color:transparent !important;
+    }
+
+    .hero-title,
+    .section-title{
+      color:#624b3b !important;
+    }
+
+    .quote{
+      background:rgba(255,249,237,.80) !important;
+      border-color:rgba(179,132,84,.12) !important;
+    }
+
+    .blessing{
+      background:rgba(242,230,201,.44) !important;
+      border-color:rgba(173,126,79,.10) !important;
+    }
+
+    .detail,
+    .detail.dress,
+    .calendar,
+    .radio,
+    .ornament-copy,
+    .ornament-item{
+      background:
+        linear-gradient(180deg,rgba(255,251,244,.95),rgba(245,235,212,.88)) !important;
+      border-color:rgba(156,113,73,.12) !important;
+    }
+
+    .number,
+    .language-btn,
+    .music-fab button,
+    .mapbtn,
+    .primary-btn{
+      background:linear-gradient(135deg,#a95e3d,#d68a57) !important;
+      box-shadow:0 10px 22px rgba(121,84,55,.14) !important;
+    }
+
+    .lang-switch,
+    .music-fab{
+      background:rgba(255,250,242,.93) !important;
+      border-color:rgba(156,113,73,.12) !important;
+    }
+
+    .lang-switch button.active{
+      background:#ba6b45 !important;
+    }
+
+    .asset,
+    .card-decor,
+    .divider-art,
+    .ornament-item img{
+      filter:saturate(.88) brightness(1.04) drop-shadow(0 5px 8px rgba(96,72,49,.05)) !important;
+    }
+
+    .card-decor.decor-sun{opacity:.22 !important}
+    .card-decor.decor-bird{opacity:.12 !important}
+    .card-decor.decor-mountains{opacity:.12 !important}
+    .card-decor.decor-wave{opacity:.16 !important}
+    .card-decor.decor-top-left,
+    .card-decor.decor-top-right{opacity:.16 !important}
+    .card-decor.decor-divider-left,
+    .card-decor.decor-divider-right{opacity:.11 !important}
+    .card-decor.decor-ornament-band{opacity:.20 !important}
+    .card-decor.decor-shanyrak{opacity:.05 !important}
+    .decor-extra-sun{opacity:.14 !important}
+    .decor-extra-eagle{opacity:.08 !important}
+    .decor-extra-cloud,
+    .decor-extra-cloud2{opacity:.12 !important}
+    .decor-extra-side-orn{opacity:.07 !important}
+    .decor-extra-bottom-band{opacity:.12 !important}
+    .decor-extra-mini-eagle{opacity:.05 !important}
+
+    .ornament-copy{
+      background:
+        radial-gradient(circle at 100% 0,rgba(255,218,110,.12),transparent 36%),
+        linear-gradient(180deg,rgba(255,251,244,.96),rgba(244,234,211,.88)) !important;
+    }
+
+    .ornament-copy-title{color:#7e593f !important}
+    .ornament-copy-text,
+    .ornament-item span{color:#745f50 !important}
+
+    @media (max-width:640px){
+      .hero{
+        min-height:760px !important;
+      }
+      .hero::after{
+        bottom:84px !important;
+        height:110px !important;
+        opacity:.18 !important;
+      }
+      .hero-cloud1{width:152px !important;left:-18px !important}
+      .hero-cloud2{width:182px !important;right:-18px !important;top:118px !important}
+      .hero-sun{width:84px !important;right:14px !important}
+      .hero-eagle{width:132px !important;right:18px !important;top:164px !important}
+      .hero-mountains{opacity:.28 !important}
+    }
+
+  
+    /* =========================================================
+       FINAL RESPONSIVE BACKGROUND
+       Desktop / laptop  -> PC.png
+       Phone / tablet    -> mobile.png
+       ========================================================= */
+
+    html{
+      background:#f4e7bd;
+    }
+
+    body{
+      position:relative;
+      background:transparent !important;
+      min-height:100vh;
+    }
+
+    /* Full-screen background image */
+    body::before{
+      content:"" !important;
+      position:fixed !important;
+      inset:0 !important;
+      width:100% !important;
+      height:100% !important;
+      z-index:-3 !important;
+      pointer-events:none !important;
+
+      background-image:url('./PC.png') !important;
+      background-repeat:no-repeat !important;
+      background-position:center center !important;
+      background-size:cover !important;
+
+      opacity:1 !important;
+      transform:translateZ(0);
+    }
+
+    /* Very light veil so text/cards remain readable */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      pointer-events:none;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,249,229,.10) 0%,
+          rgba(255,247,222,.08) 48%,
+          rgba(255,247,222,.12) 100%
+        );
+    }
+
+    /* Cards allow some of the illustration to remain visible */
+    section.card{
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,253,247,.91),
+          rgba(251,244,228,.88)
+        ) !important;
+      border:1px solid rgba(139,103,69,.16) !important;
+      box-shadow:
+        0 18px 45px rgba(77,57,42,.12),
+        inset 0 1px 0 rgba(255,255,255,.72) !important;
+      backdrop-filter:blur(7px) saturate(1.04);
+      -webkit-backdrop-filter:blur(7px) saturate(1.04);
+    }
+
+    /* First screen is slightly more transparent */
+    .hero{
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,252,242,.88),
+          rgba(248,238,213,.84)
+        ) !important;
+    }
+
+    /* The external background already contains landscape,
+       so reduce duplicate scenic artwork inside the hero. */
+    .hero::before{
+      opacity:.035 !important;
+    }
+
+    .hero::after{
+      opacity:.07 !important;
+    }
+
+    .hero-mountains{
+      opacity:.12 !important;
+    }
+
+    .hero-cloud1{
+      opacity:.34 !important;
+    }
+
+    .hero-cloud2{
+      opacity:.25 !important;
+    }
+
+    .hero-wave{
+      opacity:.10 !important;
+    }
+
+    .hero-sun{
+      opacity:.58 !important;
+    }
+
+    .hero-eagle{
+      opacity:.50 !important;
+    }
+
+    /* Language screen also uses the same background */
+    .language-gate{
+      background:rgba(247,236,202,.24) !important;
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+    }
+
+    .language-card{
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,253,246,.95),
+          rgba(250,242,224,.93)
+        ) !important;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    /* -------- TABLETS AND PHONES -------- */
+    @media (max-width: 768px){
+      body::before{
+        background-image:url('./mobile.png') !important;
+        background-position:center center !important;
+        background-size:cover !important;
+      }
+
+      body::after{
+        background:rgba(255,248,226,.08);
+      }
+
+      section.card{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255,253,247,.93),
+            rgba(251,244,228,.90)
+          ) !important;
+        backdrop-filter:blur(5px) saturate(1.03);
+        -webkit-backdrop-filter:blur(5px) saturate(1.03);
+      }
+
+      .hero{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255,253,244,.89),
+            rgba(249,240,218,.86)
+          ) !important;
+      }
+    }
+
+    /* Narrow phones */
+    @media (max-width: 430px){
+      .page{
+        width:94vw !important;
+      }
+
+      body::before{
+        background-position:center center !important;
+      }
+
+      section.card{
+        border-radius:24px !important;
+      }
+    }
+
+    /* Large desktop monitors */
+    @media (min-width: 1400px){
+      body::before{
+        background-position:center center !important;
+        background-size:cover !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -738,13 +1840,13 @@
 
         <div class="child-name">Дінмұхамед</div>
         <div class="hero-kicker" id="heroKicker">БІРІНШІ ҚАДАМ • ҚОС ҚУАНЫШ</div>
-        <div class="tusau" id="tusauTitle">Тұсаукесері</div>
+        <div class="tusau-wrap"><span class="tusau-eyebrow" id="tusauEyebrow">ДІНМҰХАМЕДТІҢ</span><div class="tusau" id="tusauTitle">Тұсау кесер</div></div>
         <div class="and" id="andText">және</div>
         <div class="hero-title" id="retirementTitle">Анамыздың зейнетке шығу тойы</div>
 
         <div class="hero-lead" id="heroLead">
           Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>
-          Сіздерді Дінмұхамедтің тұсаукесері мен анамыздың зейнетке шығу тойына арналған ақ дастарқанымыздың қадірлі қонағы болуға шақырамыз.
+          Сіздерді Дінмұхамедтің Тұсау кесер мен анамыздың зейнетке шығу тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.
         </div>
 
         <div class="quote" id="quoteText">«Қуаныш бөліссе — көбейеді»</div>
@@ -761,9 +1863,11 @@
         <img class="card-decor decor-bird" src="./5_photo (2).png" alt="">
         <img class="card-decor decor-ornament-band" src="./4_photo (2).png" alt="">
         <img class="divider-art" src="./3_photo (2).png" alt="">
+        <img class="card-decor decor-extra-sun" src="./6_photo (2).png" alt="">
+        <img class="card-decor decor-extra-eagle" src="./5_photo (2).png" alt="">
         <h2 class="section-title" id="guestsTitle">Құрметті қонақтар!</h2>
         <div class="text" id="inviteBody">
-          Кішкентай <span class="em">Дінмұхамедтің тұсаукесерін</span> және аяулы анамыздың маңдай термен атқарған еңбегінің мерейлі белесі — <span class="em">зейнетке шығу тойын</span> бірге атап өткелі отырмыз.<br><br>
+          Кішкентай <span class="em">Дінмұхамедтің Тұсау кесерін</span> және аяулы анамыздың маңдай термен атқарған еңбегінің мерейлі белесі — <span class="em">зейнетке шығу тойын</span> бірге атап өткелі отырмыз.<br><br>
           Осы ерекше күні қуанышымызға ортақтасып, ақ тілегіңіз бен ақ батаңызды арнап, төрімізден орын алсаңыздар — біз үшін үлкен мәртебе.
         </div>
         <div class="blessing" id="blessingText">
@@ -801,9 +1905,44 @@
           </div>
 
           <div class="detail dress">
-            <div class="detail-label" id="dressCodeLabel">Киім үлгісі</div>
-            <div class="detail-main" id="dressCodeTitle">Қазақы ұлттық нақыш</div>
-            <div class="detail-sub" id="dressCodeText">Ұлттық киім, камзол, шапан немесе қазақы ою-өрнек элементтері бар мерекелік образ</div>
+            <div class="detail-label" id="dressCodeLabel">Безендіру</div>
+            <div class="detail-main" id="dressCodeTitle">Ою-өрнек пен ұлттық әсемдік</div>
+            <div class="detail-sub" id="dressCodeText">Тойымыз қазақы ою-өрнек, ұлттық нақыштағы әшекейлер және жылы дәстүрлі безендіру элементтерімен көркемделеді.</div>
+          </div>
+
+        </div>
+
+        <div class="ornament-copy">
+          <div class="ornament-copy-title" id="ornamentCopyTitle">Ұлттық нақыш</div>
+          <div class="ornament-copy-text" id="ornamentCopyText">
+            Мерекелік кештің сәні — қазақы ою-өрнек, ұлттық әшекей, жылы түстер және дәстүрлі нақыштағы көркем безендіру.
+          </div>
+        </div>
+
+        <div class="ornament-showcase">
+          <div class="ornament-item wide">
+            <img src="./8_photo.png" alt="Шаңырақ">
+            <span id="ornamentItem1">Шаңырақ</span>
+          </div>
+          <div class="ornament-item">
+            <img src="./5_photo (2).png" alt="Қыран">
+            <span id="ornamentItem2">Қыран</span>
+          </div>
+          <div class="ornament-item">
+            <img src="./6_photo (2).png" alt="Күн">
+            <span id="ornamentItem3">Күн нұры</span>
+          </div>
+          <div class="ornament-item">
+            <img src="./1_photo.png" alt="Таулар">
+            <span id="ornamentItem4">Таулар</span>
+          </div>
+          <div class="ornament-item">
+            <img src="./2_photo (2).png" alt="Ою-өрнек">
+            <span id="ornamentItem5">Ою-өрнек</span>
+          </div>
+          <div class="ornament-item">
+            <img src="./4_photo (2).png" alt="Өрнекті жиек">
+            <span id="ornamentItem6">Өрнекті жиек</span>
           </div>
         </div>
       </div>
@@ -816,6 +1955,8 @@
         <img class="card-decor decor-sun" src="./6_photo (2).png" alt="">
         <img class="card-decor decor-mountains" src="./1_photo.png" alt="">
         <img class="divider-art" src="./4_photo (2).png" alt="">
+        <img class="card-decor decor-extra-cloud" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-extra-cloud2" src="./3_photo (2).png" alt="">
         <h2 class="section-title" id="calendarTitle">Мерейлі күн</h2>
 
         <div class="calendar">
@@ -842,6 +1983,7 @@
         <img class="card-decor decor-divider-left" src="./2_photo (2).png" alt="">
         <img class="card-decor decor-divider-right" src="./3_photo (2).png" alt="">
         <img class="divider-art" src="./3_photo (2).png" alt="">
+        <img class="card-decor decor-extra-side-orn" src="./4_photo (2).png" alt="">
         <h2 class="section-title" id="rsvpTitle">Қатысуыңызды растаңыз</h2>
         <p class="section-sub" id="rsvpIntro">Жауабыңызды алдын ала қалдырсаңыз, бізге өте ыңғайлы болады.</p>
 
@@ -853,7 +1995,7 @@
               target="rsvpSink"
               action="https://script.google.com/macros/s/AKfycbz_K-k_H-rBPox3eEkpVCpv6sC8gB1_nCdm4QFKgapD_JEp-2l0aS0plFK5YWxBKBg/exec">
 
-          <input type="hidden" name="event" value="Дінмұхамедтің тұсаукесері және анамыздың зейнетке шығу тойы">
+          <input type="hidden" name="event" value="Дінмұхамедтің Тұсау кесер және анамыздың зейнетке шығу тойы">
           <input type="hidden" name="eventDate" value="04.10.2026">
           <input type="hidden" name="venue" value="Kerege, Астана">
 
@@ -907,9 +2049,11 @@
         <img class="card-decor decor-mountains" src="./1_photo.png" alt="">
         <img class="card-decor decor-ornament-band" src="./4_photo (2).png" alt="">
         <img class="divider-art" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-extra-bottom-band" src="./4_photo (2).png" alt="">
+        <img class="card-decor decor-extra-mini-eagle" src="./5_photo (2).png" alt="">
         <h2 class="section-title" id="footerTitle">Ақ тілекпен күтеміз!</h2>
         <div class="text" id="footerBody">
-          Қуанышымызға ортақтасып, ақ дастарқанымыздың сәнін келтіріңіздер. Сіздердің жылы лебіздеріңіз бен ақ баталарыңыз — біз үшін ең қымбат сый.
+          Қуанышымызға ортақтасып, ақ дастарханымыздың сәнін келтіріңіздер. Сіздердің жылы лебіздеріңіз бен ақ баталарыңыз — біз үшін ең қымбат сый.
         </div>
         <div class="footer-note" id="footerNote">Кездескенше, қадірлі қонақтар!</div>
       </div>
@@ -923,14 +2067,15 @@
         inviteTicket:'Шақыру билеті',
         photoBadge:'1 жас',
         heroKicker:'БІРІНШІ ҚАДАМ • ҚОС ҚУАНЫШ',
-        tusauTitle:'Тұсаукесері',
+        tusauEyebrow:'ДІНМҰХАМЕДТІҢ',
+        tusauTitle:'Тұсау кесер',
         andText:'және',
         retirementTitle:'Анамыздың зейнетке шығу тойы',
-        heroLead:'Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>Сіздерді Дінмұхамедтің тұсаукесері мен анамыздың зейнетке шығу тойына арналған ақ дастарқанымыздың қадірлі қонағы болуға шақырамыз.',
+        heroLead:'Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>Сіздерді Дінмұхамедтің Тұсау кесер мен анамыздың зейнетке шығу тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.',
         quoteText:'«Қуаныш бөліссе — көбейеді»',
         scrollText:'Төменге жылжытыңыз ↓',
         guestsTitle:'Құрметті қонақтар!',
-        inviteBody:'Кішкентай <span class="em">Дінмұхамедтің тұсаукесерін</span> және аяулы анамыздың маңдай термен атқарған еңбегінің мерейлі белесі — <span class="em">зейнетке шығу тойын</span> бірге атап өткелі отырмыз.<br><br>Осы ерекше күні қуанышымызға ортақтасып, ақ тілегіңіз бен ақ батаңызды арнап, төрімізден орын алсаңыздар — біз үшін үлкен мәртебе.',
+        inviteBody:'Кішкентай <span class="em">Дінмұхамедтің Тұсау кесерін</span> және аяулы анамыздың маңдай термен атқарған еңбегінің мерейлі белесі — <span class="em">зейнетке шығу тойын</span> бірге атап өткелі отырмыз.<br><br>Осы ерекше күні қуанышымызға ортақтасып, ақ тілегіңіз бен ақ батаңызды арнап, төрімізден орын алсаңыздар — біз үшін үлкен мәртебе.',
         blessingText:'Анамыздың абыройы асқақ, ғұмыры ұзақ болсын!<br>Дінмұхамедтің қадамы нық, жолы ашық болсын!',
         detailsTitle:'Тойдың жай-жапсары',
         detailsChip:'Басты ақпарат',
@@ -940,9 +2085,9 @@
         venueLabel:'Өтетін орны',
         venueText:'Астана қаласы<br>Қабанбай батыр даңғылы, 19/1',
         mapText:'Картаны ашу',
-        dressCodeLabel:'Киім үлгісі',
-        dressCodeTitle:'Қазақы ұлттық нақыш',
-        dressCodeText:'Ұлттық киім, камзол, шапан немесе қазақы ою-өрнек элементтері бар мерекелік образ',
+        dressCodeLabel:'Безендіру',
+        dressCodeTitle:'Ою-өрнек пен ұлттық әсемдік',
+        dressCodeText:'Тойымыз қазақы ою-өрнек, ұлттық нақыштағы әшекейлер және жылы дәстүрлі безендіру элементтерімен көркемделеді.',
         calendarTitle:'Мерейлі күн',
         calendarMonth:'Қазан 2026',
         dow:['дс','сс','ср','бс','жм','сб','жс'],
@@ -965,25 +2110,34 @@
         sending:'Жіберіліп жатыр…',
         success:'Рақмет! Жауабыңыз жіберілді ✓',
         footerTitle:'Ақ тілекпен күтеміз!',
-        footerBody:'Қуанышымызға ортақтасып, ақ дастарқанымыздың сәнін келтіріңіздер. Сіздердің жылы лебіздеріңіз бен ақ баталарыңыз — біз үшін ең қымбат сый.',
+        footerBody:'Қуанышымызға ортақтасып, ақ дастарханымыздың сәнін келтіріңіздер. Сіздердің жылы лебіздеріңіз бен ақ баталарыңыз — біз үшін ең қымбат сый.',
         footerNote:'Кездескенше, қадірлі қонақтар!',
         music:'Әуен',
         musicOn:'Әуен қосулы',
         musicOff:'Әуен өшірулі',
-        audioError:'Әуен файлы жүктелмеді'
+        audioError:'Әуен файлы жүктелмеді',
+        ornamentCopyTitle:'Ұлттық нақыш',
+        ornamentCopyText:'Мерекелік кештің сәні — қазақы ою-өрнек, ұлттық әшекей, жылы түстер және дәстүрлі нақыштағы көркем безендіру.',
+        ornamentItem1:'Шаңырақ',
+        ornamentItem2:'Қыран',
+        ornamentItem3:'Күн нұры',
+        ornamentItem4:'Таулар',
+        ornamentItem5:'Ою-өрнек',
+        ornamentItem6:'Өрнекті жиек'
       },
       ru: {
         inviteTicket:'Приглашение',
         photoBadge:'1 год',
         heroKicker:'ПЕРВЫЕ ШАГИ • ДВА ПОВОДА ДЛЯ РАДОСТИ',
-        tusauTitle:'Тұсаукесер',
+        tusauEyebrow:'ДІНМҰХАМЕД',
+        tusauTitle:'Тұсау кесер',
         andText:'и',
         retirementTitle:'Праздник в честь выхода нашей мамы на пенсию',
-        heroLead:'Дорогие родные и друзья!<br>От всего сердца приглашаем вас разделить с нами два радостных события: тұсаукесер Дінмұхамеда и семейный праздник в честь выхода нашей мамы на пенсию.',
+        heroLead:'Дорогие родные и друзья!<br>От всего сердца приглашаем вас разделить с нами два радостных события: Тұсау кесер Дінмұхамеда и семейный праздник в честь выхода нашей мамы на пенсию.',
         quoteText:'«Радость становится больше, когда ею делятся»',
         scrollText:'Смотреть приглашение ↓',
         guestsTitle:'Дорогие гости!',
-        inviteBody:'С большой радостью приглашаем вас на <span class="em">тұсаукесер Дінмұхамеда</span> и на наш семейный праздник в честь <span class="em">выхода мамы на пенсию</span>.<br><br>Нам будет очень приятно провести этот день вместе с вами, услышать ваши добрые пожелания и разделить радость за одним дастарханом.',
+        inviteBody:'С большой радостью приглашаем вас на <span class="em">Тұсау кесер Дінмұхамеда</span> и на наш семейный праздник в честь <span class="em">выхода мамы на пенсию</span>.<br><br>Нам будет очень приятно провести этот день вместе с вами, услышать ваши добрые пожелания и разделить радость за одним дастарханом.',
         blessingText:'Пусть у нашей мамы впереди будет много светлых, спокойных и счастливых лет!<br>Пусть путь Дінмұхамеда будет светлым, а каждый его шаг — уверенным и счастливым!',
         detailsTitle:'Где и когда',
         detailsChip:'Основная информация',
@@ -993,9 +2147,9 @@
         venueLabel:'Место проведения',
         venueText:'г. Астана<br>проспект Кабанбай батыра, 19/1',
         mapText:'Открыть карту',
-        dressCodeLabel:'Дресс-код',
-        dressCodeTitle:'Казахский национальный стиль',
-        dressCodeText:'Будем рады видеть вас в национальных образах, традиционных нарядах или в праздничной одежде с элементами казахского орнамента.',
+        dressCodeLabel:'Оформление',
+        dressCodeTitle:'Казахский орнамент и национальная эстетика',
+        dressCodeText:'Праздничное оформление будет выполнено в казахском национальном стиле: ою-өрнек, традиционные украшения и тёплые этнические детали.',
         calendarTitle:'Дата нашего праздника',
         calendarMonth:'Октябрь 2026',
         dow:['пн','вт','ср','чт','пт','сб','вс'],
@@ -1051,6 +2205,7 @@
       setText('inviteTicket',t.inviteTicket);
       setText('photoBadge',t.photoBadge);
       setText('heroKicker',t.heroKicker);
+      setText('tusauEyebrow',t.tusauEyebrow);
       setText('tusauTitle',t.tusauTitle);
       setText('andText',t.andText);
       setText('retirementTitle',t.retirementTitle);
@@ -1071,6 +2226,14 @@
       setText('dressCodeLabel',t.dressCodeLabel);
       setText('dressCodeTitle',t.dressCodeTitle);
       setText('dressCodeText',t.dressCodeText);
+      setText('ornamentCopyTitle',t.ornamentCopyTitle);
+      setText('ornamentCopyText',t.ornamentCopyText);
+      setText('ornamentItem1',t.ornamentItem1);
+      setText('ornamentItem2',t.ornamentItem2);
+      setText('ornamentItem3',t.ornamentItem3);
+      setText('ornamentItem4',t.ornamentItem4);
+      setText('ornamentItem5',t.ornamentItem5);
+      setText('ornamentItem6',t.ornamentItem6);
       setText('calendarTitle',t.calendarTitle);
       setText('calendarMonth',t.calendarMonth);
       setText('countTitle',t.countTitle);
