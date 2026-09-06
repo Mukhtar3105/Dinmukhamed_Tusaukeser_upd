@@ -927,137 +927,7 @@
     }
 
   
-    /* ===== Ornament-focused revision (no dress code) ===== */
-    .ornament-copy{
-      margin-top:22px;
-      padding:16px 18px 18px;
-      border-radius:22px;
-      background:
-        radial-gradient(circle at 50% 0%,rgba(255,206,95,.22),transparent 70%),
-        linear-gradient(135deg,rgba(255,250,236,.96),rgba(255,236,193,.92));
-      border:1px solid rgba(206,102,38,.18);
-      text-align:center;
-      box-shadow:0 10px 24px rgba(121,70,28,.07);
-    }
-    .ornament-copy-title{
-      font:700 24px/1.2 "Noto Serif", serif;
-      color:#8d472a;
-      margin-bottom:8px;
-    }
-    .ornament-copy-text{
-      color:#7a5441;
-      font-size:15px;
-      line-height:1.72;
-      max-width:740px;
-      margin:0 auto;
-    }
-    .ornament-showcase{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:16px;
-      margin-top:18px;
-    }
-    .ornament-item{
-      position:relative;
-      border-radius:24px;
-      border:1px solid rgba(206,102,38,.18);
-      background:
-        radial-gradient(circle at 50% 0%,rgba(255,202,86,.18),transparent 70%),
-        rgba(255,251,238,.95);
-      box-shadow:0 14px 28px rgba(121,70,28,.08);
-      min-height:168px;
-      padding:18px 12px 14px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      overflow:hidden;
-    }
-    .ornament-item::before{
-      content:"";
-      position:absolute;
-      inset:auto 10px 8px 10px;
-      height:1px;
-      background:linear-gradient(90deg,transparent,rgba(201,101,33,.22),transparent);
-    }
-    .ornament-item img{
-      max-width:84%;
-      max-height:110px;
-      object-fit:contain;
-      filter:drop-shadow(0 7px 12px rgba(125,76,30,.10)) saturate(1.08);
-    }
-    .ornament-item.wide{
-      grid-column:span 3;
-      min-height:220px;
-    }
-    .ornament-item.wide img{
-      max-width:230px;
-      max-height:170px;
-    }
-    .ornament-item span{
-      margin-top:10px;
-      font-size:14px;
-      font-weight:700;
-      color:#8b502f;
-      text-align:center;
-      letter-spacing:.02em;
-    }
-
-    .decor-extra-sun{
-      right:28px;
-      top:86px;
-      width:96px;
-      opacity:.28;
-    }
-    .decor-extra-eagle{
-      left:24px;
-      bottom:48px;
-      width:146px;
-      opacity:.14;
-      transform:rotate(-8deg);
-    }
-    .decor-extra-cloud{
-      left:10px;
-      top:82px;
-      width:140px;
-      opacity:.24;
-    }
-    .decor-extra-cloud2{
-      right:16px;
-      bottom:92px;
-      width:156px;
-      opacity:.18;
-      transform:scaleX(-1);
-    }
-    .decor-extra-side-orn{
-      right:-18px;
-      top:136px;
-      width:168px;
-      opacity:.18;
-      transform:rotate(-90deg);
-    }
-    .decor-extra-bottom-band{
-      left:50%;
-      bottom:8px;
-      transform:translateX(-50%);
-      width:min(86%,560px);
-      opacity:.26;
-    }
-    .decor-extra-mini-eagle{
-      right:18px;
-      top:120px;
-      width:118px;
-      opacity:.12;
-      transform:rotate(8deg);
-    }
-
-    @media (max-width: 760px){
-      .ornament-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .ornament-item.wide{grid-column:span 2}
-    }
-    @media (max-width: 520px){
-      .ornament-showcase{grid-template-columns:1fr}
-      .ornament-item.wide{grid-column:span 1}
+    .ornament-item.wide{grid-column:span 1}
       .ornament-item{min-height:150px}
       .ornament-item.wide{min-height:180px}
       .ornament-item img{max-height:96px}
@@ -1905,26 +1775,13 @@
           </div>
 
           <div class="detail dress">
-            <div class="detail-label" id="dressCodeLabel">Безендіру</div>
-            <div class="detail-main" id="dressCodeTitle">Ою-өрнек пен ұлттық әсемдік</div>
-            <div class="detail-sub" id="dressCodeText">Тойымыз қазақы ою-өрнек, ұлттық нақыштағы әшекейлер және жылы дәстүрлі безендіру элементтерімен көркемделеді.</div>
+            <div class="detail-label" id="dressCodeLabel">Киім үлгісі</div>
+            <div class="detail-main" id="dressCodeTitle">Ұлттық нақыш</div>
+            <div class="detail-sub" id="dressCodeText">Ұлттық киімдер мен қазақы әшекейлер құпталады.</div>
           </div>
 
         </div>
-
-        <div class="ornament-copy">
-          <div class="ornament-copy-title" id="ornamentCopyTitle">Ұлттық нақыш</div>
-          <div class="ornament-copy-text" id="ornamentCopyText">
-            Мерекелік кештің сәні — қазақы ою-өрнек, ұлттық әшекей, жылы түстер және дәстүрлі нақыштағы көркем безендіру.
-          </div>
-        </div>
-
-        <div class="ornament-showcase">
-          <div class="ornament-item wide">
-            <img src="./8_photo.png" alt="Шаңырақ">
-            <span id="ornamentItem1">Шаңырақ</span>
-          </div>
-          <div class="ornament-item">
+<div class="ornament-item">
             <img src="./5_photo (2).png" alt="Қыран">
             <span id="ornamentItem2">Қыран</span>
           </div>
@@ -2085,9 +1942,9 @@
         venueLabel:'Өтетін орны',
         venueText:'Астана қаласы<br>Қабанбай батыр даңғылы, 19/1',
         mapText:'Картаны ашу',
-        dressCodeLabel:'Безендіру',
-        dressCodeTitle:'Ою-өрнек пен ұлттық әсемдік',
-        dressCodeText:'Тойымыз қазақы ою-өрнек, ұлттық нақыштағы әшекейлер және жылы дәстүрлі безендіру элементтерімен көркемделеді.',
+        dressCodeLabel:'Киім үлгісі',
+        dressCodeTitle:'Ұлттық нақыш',
+        dressCodeText:'Ұлттық киімдер мен қазақы әшекейлер құпталады.',
         calendarTitle:'Мерейлі күн',
         calendarMonth:'Қазан 2026',
         dow:['дс','сс','ср','бс','жм','сб','жс'],
@@ -2116,14 +1973,6 @@
         musicOn:'Әуен қосулы',
         musicOff:'Әуен өшірулі',
         audioError:'Әуен файлы жүктелмеді',
-        ornamentCopyTitle:'Ұлттық нақыш',
-        ornamentCopyText:'Мерекелік кештің сәні — қазақы ою-өрнек, ұлттық әшекей, жылы түстер және дәстүрлі нақыштағы көркем безендіру.',
-        ornamentItem1:'Шаңырақ',
-        ornamentItem2:'Қыран',
-        ornamentItem3:'Күн нұры',
-        ornamentItem4:'Таулар',
-        ornamentItem5:'Ою-өрнек',
-        ornamentItem6:'Өрнекті жиек'
       },
       ru: {
         inviteTicket:'Приглашение',
@@ -2147,9 +1996,9 @@
         venueLabel:'Место проведения',
         venueText:'г. Астана<br>проспект Кабанбай батыра, 19/1',
         mapText:'Открыть карту',
-        dressCodeLabel:'Оформление',
-        dressCodeTitle:'Казахский орнамент и национальная эстетика',
-        dressCodeText:'Праздничное оформление будет выполнено в казахском национальном стиле: ою-өрнек, традиционные украшения и тёплые этнические детали.',
+        dressCodeLabel:'Дресс-код',
+        dressCodeTitle:'Национальный стиль',
+        dressCodeText:'Приветствуются национальные костюмы и украшения.',
         calendarTitle:'Дата нашего праздника',
         calendarMonth:'Октябрь 2026',
         dow:['пн','вт','ср','чт','пт','сб','вс'],
@@ -2226,14 +2075,6 @@
       setText('dressCodeLabel',t.dressCodeLabel);
       setText('dressCodeTitle',t.dressCodeTitle);
       setText('dressCodeText',t.dressCodeText);
-      setText('ornamentCopyTitle',t.ornamentCopyTitle);
-      setText('ornamentCopyText',t.ornamentCopyText);
-      setText('ornamentItem1',t.ornamentItem1);
-      setText('ornamentItem2',t.ornamentItem2);
-      setText('ornamentItem3',t.ornamentItem3);
-      setText('ornamentItem4',t.ornamentItem4);
-      setText('ornamentItem5',t.ornamentItem5);
-      setText('ornamentItem6',t.ornamentItem6);
       setText('calendarTitle',t.calendarTitle);
       setText('calendarMonth',t.calendarMonth);
       setText('countTitle',t.countTitle);
