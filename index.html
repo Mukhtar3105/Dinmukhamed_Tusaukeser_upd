@@ -596,6 +596,62 @@
     .footer-card{text-align:center}
     .footer-note{margin-top:10px;font:600 14px "Noto Serif",serif;color:#7a5a49}
 
+    /* ---------- richer image ornaments ---------- */
+    .with-rich-decor .inner{padding-top:34px;padding-bottom:58px}
+    .card-decor{
+      position:absolute;
+      pointer-events:none;
+      user-select:none;
+      z-index:0;
+      opacity:.18;
+      filter:sepia(.08) saturate(.96);
+    }
+    .decor-top-left{left:-26px;top:14px;width:154px}
+    .decor-top-right{right:-26px;top:14px;width:154px;transform:scaleX(-1)}
+    .decor-sun{right:18px;top:16px;width:76px;opacity:.24}
+    .decor-bird{right:18px;top:58px;width:118px;opacity:.12}
+    .decor-mountains{left:0;right:0;bottom:0;width:100%;opacity:.13}
+    .decor-wave{left:0;right:0;bottom:0;width:100%;opacity:.20}
+    .decor-shanyrak{right:-48px;top:50%;transform:translateY(-50%);width:164px;opacity:.07}
+    .decor-ornament-band{left:12px;right:12px;bottom:12px;width:calc(100% - 24px);opacity:.26}
+    .decor-divider-left{left:-38px;bottom:34px;width:118px;opacity:.14}
+    .decor-divider-right{right:-22px;bottom:30px;width:118px;opacity:.14;transform:scaleX(-1)}
+    .detail.dress{grid-column:1 / -1;background:linear-gradient(180deg,rgba(255,248,237,.90),rgba(244,230,202,.82))}
+    .detail.dress::before{
+      content:"";
+      position:absolute;
+      inset:auto 18px 12px 18px;
+      height:42px;
+      border-radius:16px;
+      background:linear-gradient(90deg,rgba(240,199,124,.06),rgba(185,95,50,.05),rgba(240,199,124,.06));
+      z-index:-1;
+    }
+    .section-chip{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin:12px auto 0;
+      padding:8px 16px;
+      border-radius:999px;
+      border:1px solid rgba(182,124,76,.16);
+      background:rgba(255,247,233,.82);
+      color:#8f674f;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .footer-card .decor-mountains{opacity:.11}
+    .footer-card .decor-ornament-band{opacity:.30}
+
+    @media(max-width:520px){
+      .with-rich-decor .inner{padding-bottom:52px}
+      .decor-top-left,.decor-top-right{width:120px}
+      .decor-bird{width:88px;top:56px}
+      .decor-shanyrak{width:118px;right:-34px}
+      .decor-divider-left,.decor-divider-right{width:88px;bottom:24px}
+    }
+
     @media(max-width:520px){
       .page{width:min(94vw,var(--maxw));padding-top:10px}
       .inner{padding:27px 17px}
@@ -697,8 +753,13 @@
     </section>
 
     <!-- INVITE -->
-    <section class="card" id="inviteSection">
+    <section class="card with-rich-decor" id="inviteSection">
       <div class="inner">
+        <img class="card-decor decor-top-left" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-top-right" src="./3_photo (2).png" alt="">
+        <img class="card-decor decor-sun" src="./6_photo (2).png" alt="">
+        <img class="card-decor decor-bird" src="./5_photo (2).png" alt="">
+        <img class="card-decor decor-ornament-band" src="./4_photo (2).png" alt="">
         <img class="divider-art" src="./3_photo (2).png" alt="">
         <h2 class="section-title" id="guestsTitle">Құрметті қонақтар!</h2>
         <div class="text" id="inviteBody">
@@ -713,10 +774,15 @@
     </section>
 
     <!-- DETAILS -->
-    <section class="card" id="detailsSection">
+    <section class="card with-rich-decor" id="detailsSection">
       <div class="inner">
+        <img class="card-decor decor-top-left" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-top-right" src="./3_photo (2).png" alt="">
+        <img class="card-decor decor-shanyrak" src="./8_photo.png" alt="">
+        <img class="card-decor decor-wave" src="./4_photo (2).png" alt="">
         <img class="divider-art" src="./2_photo (2).png" alt="">
         <h2 class="section-title" id="detailsTitle">Тойдың жай-жапсары</h2>
+        <div class="section-chip" id="detailsChip">Басты ақпарат</div>
 
         <div class="details-grid">
           <div class="detail">
@@ -733,13 +799,22 @@
                href="https://2gis.kz/astana/geo/70000001036720755"
                target="_blank" rel="noopener" id="mapText">Картаны ашу</a>
           </div>
+
+          <div class="detail dress">
+            <div class="detail-label" id="dressCodeLabel">Киім үлгісі</div>
+            <div class="detail-main" id="dressCodeTitle">Қазақы ұлттық нақыш</div>
+            <div class="detail-sub" id="dressCodeText">Ұлттық киім, камзол, шапан немесе қазақы ою-өрнек элементтері бар мерекелік образ</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CALENDAR -->
-    <section class="card">
+    <section class="card with-rich-decor">
       <div class="inner">
+        <img class="card-decor decor-top-left" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-sun" src="./6_photo (2).png" alt="">
+        <img class="card-decor decor-mountains" src="./1_photo.png" alt="">
         <img class="divider-art" src="./4_photo (2).png" alt="">
         <h2 class="section-title" id="calendarTitle">Мерейлі күн</h2>
 
@@ -760,8 +835,12 @@
     </section>
 
     <!-- RSVP -->
-    <section class="card" id="rsvp">
+    <section class="card with-rich-decor" id="rsvp">
       <div class="inner">
+        <img class="card-decor decor-top-left" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-top-right" src="./3_photo (2).png" alt="">
+        <img class="card-decor decor-divider-left" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-divider-right" src="./3_photo (2).png" alt="">
         <img class="divider-art" src="./3_photo (2).png" alt="">
         <h2 class="section-title" id="rsvpTitle">Қатысуыңызды растаңыз</h2>
         <p class="section-sub" id="rsvpIntro">Жауабыңызды алдын ала қалдырсаңыз, бізге өте ыңғайлы болады.</p>
@@ -821,8 +900,12 @@
     </section>
 
     <!-- FOOTER -->
-    <section class="card footer-card">
+    <section class="card footer-card with-rich-decor">
       <div class="inner">
+        <img class="card-decor decor-top-left" src="./2_photo (2).png" alt="">
+        <img class="card-decor decor-top-right" src="./3_photo (2).png" alt="">
+        <img class="card-decor decor-mountains" src="./1_photo.png" alt="">
+        <img class="card-decor decor-ornament-band" src="./4_photo (2).png" alt="">
         <img class="divider-art" src="./2_photo (2).png" alt="">
         <h2 class="section-title" id="footerTitle">Ақ тілекпен күтеміз!</h2>
         <div class="text" id="footerBody">
@@ -850,12 +933,16 @@
         inviteBody:'Кішкентай <span class="em">Дінмұхамедтің тұсаукесерін</span> және аяулы анамыздың маңдай термен атқарған еңбегінің мерейлі белесі — <span class="em">зейнетке шығу тойын</span> бірге атап өткелі отырмыз.<br><br>Осы ерекше күні қуанышымызға ортақтасып, ақ тілегіңіз бен ақ батаңызды арнап, төрімізден орын алсаңыздар — біз үшін үлкен мәртебе.',
         blessingText:'Анамыздың абыройы асқақ, ғұмыры ұзақ болсын!<br>Дінмұхамедтің қадамы нық, жолы ашық болсын!',
         detailsTitle:'Тойдың жай-жапсары',
+        detailsChip:'Басты ақпарат',
         dateLabel:'Өтетін күні',
         dateText:'04 қазан 2026',
         weekdayText:'Жексенбі',
         venueLabel:'Өтетін орны',
         venueText:'Астана қаласы<br>Қабанбай батыр даңғылы, 19/1',
         mapText:'Картаны ашу',
+        dressCodeLabel:'Киім үлгісі',
+        dressCodeTitle:'Қазақы ұлттық нақыш',
+        dressCodeText:'Ұлттық киім, камзол, шапан немесе қазақы ою-өрнек элементтері бар мерекелік образ',
         calendarTitle:'Мерейлі күн',
         calendarMonth:'Қазан 2026',
         dow:['дс','сс','ср','бс','жм','сб','жс'],
@@ -899,12 +986,16 @@
         inviteBody:'С большой радостью приглашаем вас на <span class="em">тұсаукесер Дінмұхамеда</span> и на наш семейный праздник в честь <span class="em">выхода мамы на пенсию</span>.<br><br>Нам будет очень приятно провести этот день вместе с вами, услышать ваши добрые пожелания и разделить радость за одним дастарханом.',
         blessingText:'Пусть у нашей мамы впереди будет много светлых, спокойных и счастливых лет!<br>Пусть путь Дінмұхамеда будет светлым, а каждый его шаг — уверенным и счастливым!',
         detailsTitle:'Где и когда',
+        detailsChip:'Основная информация',
         dateLabel:'Дата',
         dateText:'04 октября 2026',
         weekdayText:'Воскресенье',
         venueLabel:'Место проведения',
         venueText:'г. Астана<br>проспект Кабанбай батыра, 19/1',
         mapText:'Открыть карту',
+        dressCodeLabel:'Дресс-код',
+        dressCodeTitle:'Казахский национальный стиль',
+        dressCodeText:'Будем рады видеть вас в национальных образах, традиционных нарядах или в праздничной одежде с элементами казахского орнамента.',
         calendarTitle:'Дата нашего праздника',
         calendarMonth:'Октябрь 2026',
         dow:['пн','вт','ср','чт','пт','сб','вс'],
@@ -970,12 +1061,16 @@
       setText('inviteBody',t.inviteBody,true);
       setText('blessingText',t.blessingText,true);
       setText('detailsTitle',t.detailsTitle);
+      setText('detailsChip',t.detailsChip);
       setText('dateLabel',t.dateLabel);
       setText('dateText',t.dateText);
       setText('weekdayText',t.weekdayText);
       setText('venueLabel',t.venueLabel);
       setText('venueText',t.venueText,true);
       setText('mapText',t.mapText);
+      setText('dressCodeLabel',t.dressCodeLabel);
+      setText('dressCodeTitle',t.dressCodeTitle);
+      setText('dressCodeText',t.dressCodeText);
       setText('calendarTitle',t.calendarTitle);
       setText('calendarMonth',t.calendarMonth);
       setText('countTitle',t.countTitle);
