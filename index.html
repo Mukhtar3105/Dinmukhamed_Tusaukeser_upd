@@ -1650,6 +1650,406 @@
       }
     }
 
+  
+    /* =========================================================
+       FINAL MOBILE / DESKTOP BACKGROUND INTEGRATION
+       PC.png      — desktop / notebook background
+       mobile.png  — phone / tablet background
+
+       On mobile the same illustration is also used organically
+       inside the content cards, with different crops per section.
+       ========================================================= */
+
+    html{
+      background:#f2e3b8;
+    }
+
+    body{
+      position:relative;
+      min-height:100vh;
+      background:transparent !important;
+    }
+
+    /* Main fixed page background */
+    body::before{
+      content:"" !important;
+      position:fixed !important;
+      inset:0 !important;
+      z-index:-4 !important;
+      width:100% !important;
+      height:100% !important;
+      pointer-events:none !important;
+      opacity:1 !important;
+
+      background-image:url('./PC.png') !important;
+      background-repeat:no-repeat !important;
+      background-position:center center !important;
+      background-size:cover !important;
+
+      transform:translateZ(0);
+    }
+
+    /* Very light veil only — the picture should stay visible */
+    body::after{
+      content:"" !important;
+      position:fixed !important;
+      inset:0 !important;
+      z-index:-3 !important;
+      pointer-events:none !important;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,248,221,.06) 0%,
+          rgba(255,248,221,.04) 50%,
+          rgba(255,244,213,.08) 100%
+        ) !important;
+    }
+
+    .page{
+      position:relative;
+      z-index:1;
+    }
+
+    /* Desktop: let the main PC background remain visible */
+    section.card{
+      position:relative !important;
+      overflow:hidden !important;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,253,246,.86),
+          rgba(249,240,220,.82)
+        ) !important;
+      border:1px solid rgba(139,99,64,.15) !important;
+      box-shadow:
+        0 16px 38px rgba(84,58,39,.11),
+        inset 0 1px 0 rgba(255,255,255,.76) !important;
+
+      backdrop-filter:blur(4px) saturate(1.02) !important;
+      -webkit-backdrop-filter:blur(4px) saturate(1.02) !important;
+    }
+
+    /* Do not place panel backgrounds over the hero:
+       the hero already has its own composition. */
+    section.card:not(.hero)::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+
+      background-image:
+        linear-gradient(
+          180deg,
+          rgba(255,252,242,.28),
+          rgba(255,250,238,.38)
+        ),
+        url('./PC.png');
+
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:center var(--panel-bg-y,50%);
+      opacity:.18;
+    }
+
+    section.card:not(.hero)::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:1;
+      pointer-events:none;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,251,242,.26),
+          rgba(255,251,242,.08) 25%,
+          rgba(255,251,242,.08) 75%,
+          rgba(255,251,242,.26)
+        );
+    }
+
+    /* Content always stays above the picture layer */
+    section.card > .inner{
+      position:relative !important;
+      z-index:2 !important;
+    }
+
+    /* Different crops keep repeated background feeling intentional */
+    #inviteSection{ --panel-bg-y:18%; }
+    #detailsSection{ --panel-bg-y:38%; }
+    #calendarSection{ --panel-bg-y:58%; }
+    #rsvp{ --panel-bg-y:76%; }
+    #footerSection{ --panel-bg-y:94%; }
+
+    /* Hero: a little more transparent so the page image is also visible */
+    .hero{
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,253,245,.80),
+          rgba(247,235,207,.76)
+        ) !important;
+      backdrop-filter:blur(3px) saturate(1.02) !important;
+      -webkit-backdrop-filter:blur(3px) saturate(1.02) !important;
+    }
+
+    /* Existing hero scenery becomes supporting decoration rather than
+       hiding the new background illustration. */
+    .hero-mountains{ opacity:.17 !important; }
+    .hero-wave{ opacity:.10 !important; }
+    .hero-cloud1{ opacity:.34 !important; }
+    .hero-cloud2{ opacity:.27 !important; }
+    .hero-sun{ opacity:.66 !important; }
+    .hero-eagle{ opacity:.55 !important; }
+
+    /* Keep existing decorative PNGs light and harmonious */
+    .card-decor{
+      opacity:.10 !important;
+      filter:saturate(.82) brightness(1.04)
+             drop-shadow(0 4px 8px rgba(75,53,37,.04)) !important;
+    }
+    .decor-top-left,
+    .decor-top-right{ opacity:.12 !important; }
+    .decor-sun{ opacity:.15 !important; }
+    .decor-bird{ opacity:.08 !important; }
+    .decor-mountains{ opacity:.09 !important; }
+    .decor-wave{ opacity:.11 !important; }
+    .decor-shanyrak{ opacity:.045 !important; }
+    .decor-ornament-band{ opacity:.13 !important; }
+    .decor-divider-left,
+    .decor-divider-right{ opacity:.08 !important; }
+
+    /* Language gate: show the same illustration behind language selector */
+    .language-gate{
+      background:rgba(248,236,199,.18) !important;
+      backdrop-filter:blur(2px) !important;
+      -webkit-backdrop-filter:blur(2px) !important;
+    }
+
+    .language-card{
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,253,247,.91),
+          rgba(250,242,224,.89)
+        ) !important;
+      border-color:rgba(141,101,65,.15) !important;
+      backdrop-filter:blur(7px) saturate(1.03) !important;
+      -webkit-backdrop-filter:blur(7px) saturate(1.03) !important;
+    }
+
+    /* ================== MOBILE / TABLET ================== */
+    @media (max-width:768px){
+
+      /* Use the dedicated portrait picture */
+      body::before{
+        background-image:url('./mobile.png') !important;
+        background-position:center top !important;
+        background-size:cover !important;
+      }
+
+      body::after{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255,248,218,.03),
+            rgba(255,246,215,.04)
+          ) !important;
+      }
+
+      .page{
+        width:94vw !important;
+        padding-top:10px !important;
+      }
+
+      /*
+        Main change:
+        cards are substantially more transparent on phones,
+        so mobile.png is clearly visible behind the content.
+      */
+      section.card{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255,253,247,.72),
+            rgba(249,240,219,.66)
+          ) !important;
+
+        border:1px solid rgba(139,99,64,.13) !important;
+
+        box-shadow:
+          0 13px 30px rgba(76,54,38,.09),
+          inset 0 1px 0 rgba(255,255,255,.65) !important;
+
+        backdrop-filter:blur(2.5px) saturate(1.01) !important;
+        -webkit-backdrop-filter:blur(2.5px) saturate(1.01) !important;
+      }
+
+      /*
+        Each content block gets its own crop of mobile.png.
+        The image is clearly visible, while the central area remains
+        readable because of the soft cream overlay.
+      */
+      section.card:not(.hero)::before{
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(255,251,239,.15),
+            rgba(255,250,237,.18)
+          ),
+          url('./mobile.png') !important;
+
+        background-size:cover !important;
+        background-position:center var(--panel-bg-y,50%) !important;
+        opacity:.36 !important;
+      }
+
+      section.card:not(.hero)::after{
+        background:
+          radial-gradient(
+            ellipse at center,
+            rgba(255,252,245,.48) 0%,
+            rgba(255,252,245,.31) 47%,
+            rgba(255,250,238,.10) 76%,
+            rgba(255,250,238,.03) 100%
+          ) !important;
+      }
+
+      /*
+        Slightly larger spacing makes the illustration visible above
+        and below each section's text without adding extra image blocks.
+      */
+      .with-rich-decor .inner{
+        padding-top:32px !important;
+        padding-bottom:52px !important;
+      }
+
+      #inviteSection .inner{
+        padding-top:38px !important;
+        padding-bottom:58px !important;
+      }
+
+      #detailsSection .inner{
+        padding-top:36px !important;
+        padding-bottom:56px !important;
+      }
+
+      #calendarSection .inner{
+        padding-top:34px !important;
+        padding-bottom:54px !important;
+      }
+
+      #rsvp .inner{
+        padding-top:36px !important;
+        padding-bottom:56px !important;
+      }
+
+      #footerSection .inner{
+        padding-top:38px !important;
+        padding-bottom:62px !important;
+      }
+
+      /* Crop points selected for the portrait background artwork */
+      #inviteSection{ --panel-bg-y:12%; }
+      #detailsSection{ --panel-bg-y:34%; }
+      #calendarSection{ --panel-bg-y:55%; }
+      #rsvp{ --panel-bg-y:76%; }
+      #footerSection{ --panel-bg-y:95%; }
+
+      /* Hero remains readable but the mobile artwork shows through */
+      .hero{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255,253,245,.69),
+            rgba(246,233,204,.63)
+          ) !important;
+
+        backdrop-filter:blur(2px) !important;
+        -webkit-backdrop-filter:blur(2px) !important;
+      }
+
+      .hero::before{
+        opacity:.025 !important;
+      }
+
+      .hero::after{
+        opacity:.04 !important;
+      }
+
+      .hero-mountains{ opacity:.10 !important; }
+      .hero-wave{ opacity:.055 !important; }
+      .hero-cloud1{ opacity:.25 !important; }
+      .hero-cloud2{ opacity:.19 !important; }
+      .hero-sun{ opacity:.54 !important; }
+      .hero-eagle{ opacity:.43 !important; }
+
+      /* Reduce extra decorations; the background itself is now the hero */
+      .card-decor{ opacity:.055 !important; }
+      .decor-top-left,
+      .decor-top-right{ opacity:.07 !important; }
+      .decor-sun{ opacity:.09 !important; }
+      .decor-bird{ opacity:.05 !important; }
+      .decor-mountains{ opacity:.05 !important; }
+      .decor-wave{ opacity:.06 !important; }
+      .decor-shanyrak{ opacity:.025 !important; }
+      .decor-ornament-band{ opacity:.075 !important; }
+      .decor-divider-left,
+      .decor-divider-right{ opacity:.045 !important; }
+
+      /* Inner widgets should not become opaque white islands */
+      .detail,
+      .detail.dress,
+      .calendar,
+      .radio,
+      .input{
+        background:rgba(255,251,242,.67) !important;
+        backdrop-filter:blur(2px) !important;
+        -webkit-backdrop-filter:blur(2px) !important;
+      }
+
+      .cal-head{
+        background:rgba(239,224,196,.60) !important;
+      }
+
+      .quote,
+      .blessing,
+      .section-chip{
+        background:rgba(248,239,219,.62) !important;
+      }
+
+      .lang-switch,
+      .music-fab{
+        background:rgba(255,251,243,.86) !important;
+        backdrop-filter:blur(6px) !important;
+        -webkit-backdrop-filter:blur(6px) !important;
+      }
+    }
+
+    @media (max-width:430px){
+      section.card{
+        border-radius:23px !important;
+      }
+
+      .inner{
+        padding-left:16px !important;
+        padding-right:16px !important;
+      }
+
+      section.card:not(.hero)::before{
+        opacity:.39 !important;
+      }
+    }
+
+    /* Desktop keeps PC.png; very large screens still fill the viewport */
+    @media (min-width:1400px){
+      body::before{
+        background-image:url('./PC.png') !important;
+        background-position:center center !important;
+        background-size:cover !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -1785,7 +2185,7 @@
     </section>
 
     <!-- CALENDAR -->
-    <section class="card with-rich-decor">
+    <section class="card with-rich-decor" id="calendarSection">
       <div class="inner">
         <img class="card-decor decor-top-left" src="./2_photo (2).png" alt="">
         <img class="card-decor decor-sun" src="./6_photo (2).png" alt="">
@@ -1878,7 +2278,7 @@
     </section>
 
     <!-- FOOTER -->
-    <section class="card footer-card with-rich-decor">
+    <section class="card footer-card with-rich-decor" id="footerSection">
       <div class="inner">
         <img class="card-decor decor-top-left" src="./2_photo (2).png" alt="">
         <img class="card-decor decor-top-right" src="./3_photo (2).png" alt="">
