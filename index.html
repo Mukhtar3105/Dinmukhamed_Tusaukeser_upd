@@ -2223,6 +2223,399 @@
       display:none !important;
     }
 
+  
+    /* =========================================================
+       FINAL POLISH — client-approved content
+       Cleaner spacing, better mobile proportions, same backgrounds.
+       ========================================================= */
+
+    /* Remove obsolete empty-item spacing completely */
+    #inviteTicket,
+    #heroKicker,
+    #quoteText,
+    #detailsTitle,
+    #tusauEyebrow{
+      display:none !important;
+      margin:0 !important;
+      padding:0 !important;
+      height:0 !important;
+    }
+
+    /* General rhythm */
+    section.card{
+      margin:14px 0 !important;
+    }
+
+    .section-chip{
+      margin-top:2px !important;
+      margin-bottom:18px !important;
+    }
+
+    /* HERO — no forced giant empty height */
+    .hero,
+    .hero .inner{
+      min-height:0 !important;
+    }
+
+    .hero .inner{
+      padding-top:28px !important;
+      padding-bottom:34px !important;
+    }
+
+    .hero-photo-wrap{
+      margin:6px auto 18px !important;
+    }
+
+    .child-name{
+      margin:8px 0 14px !important;
+      line-height:1.02 !important;
+    }
+
+    .event-title-card{
+      margin:0 auto !important;
+    }
+
+    .and{
+      margin:11px 0 !important;
+    }
+
+    .hero-lead{
+      margin-top:22px !important;
+      margin-bottom:0 !important;
+      max-width:520px !important;
+      line-height:1.72 !important;
+    }
+
+    .scroll-btn{
+      margin-top:18px !important;
+      padding:8px 12px !important;
+    }
+
+    /* Invitation section */
+    #inviteSection .section-title{
+      margin-bottom:14px !important;
+    }
+
+    #inviteSection .text{
+      margin-top:0 !important;
+    }
+
+    .blessing{
+      margin-top:20px !important;
+    }
+
+    /* Details: the deleted title no longer leaves a visual hole */
+    #detailsSection .inner{
+      padding-top:26px !important;
+    }
+
+    #detailsSection .divider-art{
+      margin-bottom:12px !important;
+    }
+
+    #detailsSection .section-chip{
+      margin-top:0 !important;
+    }
+
+    #detailsSection .details-grid{
+      margin-top:0 !important;
+    }
+
+    /* Calendar */
+    #calendarSection .section-title{
+      margin-bottom:18px !important;
+    }
+
+    #calendarSection .calendar{
+      margin-top:0 !important;
+    }
+
+    #calendarSection .count-title{
+      margin-top:24px !important;
+    }
+
+    /* RSVP */
+    #rsvp .section-title{
+      margin-bottom:6px !important;
+    }
+
+    #rsvp .section-sub{
+      margin-top:0 !important;
+      margin-bottom:18px !important;
+    }
+
+    /* Footer */
+    #footerSection .section-title{
+      margin-bottom:10px !important;
+    }
+
+    /* ================= MOBILE ================= */
+    @media(max-width:520px){
+
+      .page{
+        width:94vw !important;
+        padding-top:8px !important;
+        padding-bottom:96px !important;
+      }
+
+      section.card{
+        margin:11px 0 !important;
+        border-radius:22px !important;
+      }
+
+      .hero .inner{
+        padding:
+          22px 15px
+          30px !important;
+      }
+
+      .hero-photo-wrap{
+        width:196px !important;
+        height:196px !important;
+        margin:2px auto 14px !important;
+      }
+
+      .hero-photo{
+        width:190px !important;
+        height:190px !important;
+      }
+
+      .age-badge{
+        min-width:52px !important;
+        width:52px !important;
+        height:52px !important;
+        right:-4px !important;
+        bottom:8px !important;
+        font-size:12px !important;
+        border-width:2px !important;
+      }
+
+      .child-name{
+        margin:8px 0 13px !important;
+        font-size:clamp(43px,13vw,58px) !important;
+      }
+
+      .event-title-card{
+        width:94% !important;
+        padding:14px 12px 15px !important;
+        border-radius:18px !important;
+      }
+
+      .event-main{
+        font-size:clamp(30px,9.2vw,39px) !important;
+        line-height:1.08 !important;
+      }
+
+      .event-main-long{
+        font-size:clamp(25px,7.5vw,32px) !important;
+        line-height:1.15 !important;
+      }
+
+      .and{
+        margin:9px 0 !important;
+        font-size:16px !important;
+      }
+
+      .hero-lead{
+        margin-top:20px !important;
+        padding:0 4px !important;
+        font-size:15px !important;
+        line-height:1.68 !important;
+      }
+
+      .scroll-btn{
+        margin-top:14px !important;
+        font-size:12px !important;
+      }
+
+      /* Main content */
+      .with-rich-decor .inner{
+        padding:
+          28px 17px
+          42px !important;
+      }
+
+      #inviteSection .inner{
+        padding-top:30px !important;
+        padding-bottom:44px !important;
+      }
+
+      .section-title{
+        font-size:clamp(30px,9vw,38px) !important;
+        line-height:1.12 !important;
+      }
+
+      .text{
+        font-size:15px !important;
+        line-height:1.73 !important;
+      }
+
+      .blessing{
+        padding:16px 14px !important;
+        font-size:15px !important;
+        line-height:1.55 !important;
+      }
+
+      /* Details */
+      #detailsSection .inner{
+        padding-top:22px !important;
+        padding-bottom:36px !important;
+      }
+
+      #detailsSection .divider-art{
+        margin-bottom:8px !important;
+      }
+
+      .section-chip{
+        margin-bottom:14px !important;
+        padding:7px 14px !important;
+        font-size:11px !important;
+      }
+
+      .details-grid{
+        gap:11px !important;
+      }
+
+      .detail{
+        padding:18px 14px !important;
+        border-radius:20px !important;
+      }
+
+      .detail-main{
+        font-size:clamp(25px,7.7vw,32px) !important;
+        line-height:1.15 !important;
+      }
+
+      .detail.dress .detail-main{
+        font-size:clamp(24px,7vw,30px) !important;
+      }
+
+      .detail-sub{
+        font-size:14px !important;
+        line-height:1.55 !important;
+      }
+
+      .mapbtn{
+        margin-top:13px !important;
+      }
+
+      /* Calendar */
+      #calendarSection .inner{
+        padding-top:28px !important;
+        padding-bottom:38px !important;
+      }
+
+      #calendarSection .section-title{
+        margin-bottom:15px !important;
+      }
+
+      .calendar{
+        border-radius:21px !important;
+      }
+
+      .cal-head{
+        padding:13px 10px !important;
+        font-size:22px !important;
+      }
+
+      .dow{
+        font-size:11px !important;
+      }
+
+      .grid > div{
+        min-height:42px !important;
+        font-size:14px !important;
+      }
+
+      #calendarSection .count-title{
+        margin-top:21px !important;
+      }
+
+      .digits{
+        gap:8px !important;
+      }
+
+      .unit{
+        min-width:0 !important;
+        flex:1 1 0 !important;
+      }
+
+      .number{
+        padding:10px 4px !important;
+        font-size:25px !important;
+      }
+
+      .lab{
+        font-size:10px !important;
+      }
+
+      /* RSVP */
+      #rsvp .inner{
+        padding-top:29px !important;
+        padding-bottom:42px !important;
+      }
+
+      #rsvp .section-sub{
+        font-size:13px !important;
+        line-height:1.55 !important;
+      }
+
+      .form{
+        gap:12px !important;
+        margin-top:16px !important;
+      }
+
+      .input{
+        padding:13px 14px !important;
+        font-size:14px !important;
+      }
+
+      .radio{
+        padding:11px 12px !important;
+        font-size:13px !important;
+      }
+
+      /* Fixed controls should not cover the content as much */
+      .lang-switch{
+        top:10px !important;
+        right:10px !important;
+        transform:scale(.94);
+        transform-origin:top right;
+      }
+
+      .music-fab{
+        right:10px !important;
+        bottom:10px !important;
+        transform:scale(.92);
+        transform-origin:bottom right;
+      }
+    }
+
+    /* Very small phones */
+    @media(max-width:375px){
+      .hero-photo-wrap{
+        width:182px !important;
+        height:182px !important;
+      }
+
+      .hero-photo{
+        width:176px !important;
+        height:176px !important;
+      }
+
+      .child-name{
+        font-size:42px !important;
+      }
+
+      .event-main{
+        font-size:29px !important;
+      }
+
+      .event-main-long{
+        font-size:24px !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -2273,7 +2666,6 @@
         <img class="asset hero-wave" src="./4_photo (2).png" alt="">
         <img class="asset hero-mountains" src="./1_photo.png" alt="">
 
-        <div class="invite-ticket" id="inviteTicket"></div>
 
         <div class="hero-photo-wrap">
           <img class="hero-photo" src="./main_photo.jpeg" alt="Дінмұхамед">
@@ -2282,21 +2674,18 @@
 
         <div class="child-name">Дінмұхамед</div>
         <div class="event-title-card">
-          <span class="event-eyebrow" id="tusauEyebrow"></span>
           <div class="event-main" id="tusauTitle">Тұсау кесер</div>
         </div>
         <div class="and" id="andText">және</div>
         <div class="event-title-card">
           <div class="event-main event-main-long" id="retirementTitle">Анамыздың зейнетке шығу тойы</div>
         </div>
-        <div class="hero-kicker hero-kicker-after" id="heroKicker"></div>
 
         <div class="hero-lead" id="heroLead">
           Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>
-          Сіздерді Дінмұхамедтің Тұсау кесер мен Анамыздың зейнетке шығу тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.
+          Сіздерді Дінмұхамедтің тұсау кесері мен Анамыздың зейнетке шығу тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.
         </div>
 
-        <div class="quote" id="quoteText"></div>
         <button class="scroll-btn" id="scrollBtn" type="button">Төменге жылжытыңыз ↓</button>
       </div>
     </section>
@@ -2332,7 +2721,6 @@
         <img class="card-decor decor-shanyrak" src="./8_photo.png" alt="">
         <img class="card-decor decor-wave" src="./4_photo (2).png" alt="">
         <img class="divider-art" src="./2_photo (2).png" alt="">
-        <h2 class="section-title" id="detailsTitle"></h2>
         <div class="section-chip" id="detailsChip">Басты ақпарат</div>
 
         <div class="details-grid">
@@ -2472,7 +2860,7 @@
         tusauTitle:'Тұсау кесер',
         andText:'және',
         retirementTitle:'Анамыздың зейнетке шығу тойы',
-        heroLead:'Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>Сіздерді Дінмұхамедтің Тұсау кесер мен Анамыздың зейнетке шығу тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.',
+        heroLead:'Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>Сіздерді Дінмұхамедтің тұсау кесері мен Анамыздың зейнетке шығу тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.',
         quoteText:'',
         scrollText:'Төменге жылжытыңыз ↓',
         guestsTitle:'Құрметті қонақтар!',
