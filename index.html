@@ -2172,6 +2172,14 @@
       .event-main-long{font-size:clamp(23px,7vw,31px)}
     }
 
+  
+    /* Guest quantity selector removed completely */
+    .guest-row,
+    #guestCountLabel,
+    #guestHint{
+      display:none !important;
+    }
+
   </style>
 </head>
 
@@ -2386,7 +2394,7 @@
 
           <input type="hidden" id="guestCount" name="guestCount" value="1">
             </div>
-            <input class="input" id="guestCount" name="guestCount" type="number" min="1" max="50" value="1">
+            
           </div>
 
           <div>
