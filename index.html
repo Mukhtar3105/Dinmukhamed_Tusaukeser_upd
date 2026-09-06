@@ -2050,6 +2050,61 @@
       }
     }
 
+  
+    /* ===== Photo without frame ===== */
+    .hero-photo-wrap{
+      width:230px !important;
+      height:230px !important;
+      margin:20px auto 22px !important;
+      background:transparent !important;
+      box-shadow:none !important;
+      filter:none !important;
+      border:none !important;
+    }
+
+    .hero-photo-wrap::before,
+    .hero-photo-wrap::after{
+      display:none !important;
+      content:none !important;
+    }
+
+    .hero-photo{
+      width:220px !important;
+      height:220px !important;
+      border:none !important;
+      outline:none !important;
+      box-shadow:0 13px 30px rgba(75,52,36,.14) !important;
+      border-radius:50% !important;
+      object-fit:cover !important;
+      object-position:center 28% !important;
+    }
+
+    .hero-shanyrak{
+      display:none !important;
+    }
+
+    .age-badge{
+      right:-3px !important;
+      bottom:15px !important;
+    }
+
+    @media(max-width:520px){
+      .hero-photo-wrap{
+        width:210px !important;
+        height:210px !important;
+      }
+
+      .hero-photo{
+        width:202px !important;
+        height:202px !important;
+      }
+
+      .age-badge{
+        right:-4px !important;
+        bottom:10px !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -2103,7 +2158,6 @@
         <div class="invite-ticket" id="inviteTicket">Шақыру билеті</div>
 
         <div class="hero-photo-wrap">
-          <img class="hero-shanyrak" src="./7_photo.png" alt="">
           <img class="hero-photo" src="./main_photo.jpeg" alt="Дінмұхамед">
           <div class="age-badge" id="photoBadge">1 жас</div>
         </div>
