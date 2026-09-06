@@ -541,7 +541,6 @@
       outline:none;
       transition:border-color .18s ease,box-shadow .18s ease;
     }
-    textarea.input{min-height:92px;resize:vertical;border-radius:18px}
     .input:focus{
       border-color:rgba(185,95,50,.42);
       box-shadow:0 0 0 4px rgba(185,95,50,.08);
@@ -2180,6 +2179,16 @@
       display:none !important;
     }
 
+  
+    /* RSVP cleanup: no guest-count selector and no comment field */
+    .guest-row,
+    #guestCountLabel,
+    #guestHint,
+    #commentLabel,
+    #comment{
+      display:none !important;
+    }
+
   </style>
 </head>
 
@@ -2301,7 +2310,7 @@
 
           <div class="detail">
             <div class="detail-label" id="venueLabel">Өтетін орны</div>
-            <div class="detail-main">Kerege</div>
+            <div class="detail-main" id="venueMain">«Kerege» банкет залы</div>
             <div class="detail-sub" id="venueText">Астана қаласы<br>Қабанбай батыр даңғылы, 19/1</div>
             <a class="mapbtn"
                href="https://2gis.kz/astana/geo/70000001036720755"
@@ -2311,7 +2320,7 @@
           <div class="detail dress">
             <div class="detail-label" id="dressCodeLabel">Киім үлгісі</div>
             <div class="detail-main" id="dressCodeTitle">Ұлттық нақыш</div>
-            <div class="detail-sub" id="dressCodeText">Ұлттық киімдер мен қазақы әшекейлер құпталады.</div>
+            <div class="detail-sub" id="dressCodeText">Ұлттық киім элементтері немесе қазақы әшекейлер</div>
           </div>
 
         </div>
@@ -2365,9 +2374,10 @@
               target="rsvpSink"
               action="https://script.google.com/macros/s/AKfycbz_K-k_H-rBPox3eEkpVCpv6sC8gB1_nCdm4QFKgapD_JEp-2l0aS0plFK5YWxBKBg/exec">
 
-          <input type="hidden" name="event" value="Дінмұхамедтің Тұсау кесер және анамыздың зейнетке шығу тойы">
+          <input type="hidden" name="event" value="Дінмұхамедтің Тұсау кесері және анамыздың зейнетке шығу тойы">
           <input type="hidden" name="eventDate" value="04.10.2026">
           <input type="hidden" name="venue" value="Kerege, Астана">
+          <input type="hidden" id="guestCount" name="guestCount" value="1">
 
           <div>
             <div class="field-label" id="nameLabel">Аты-жөніңіз</div>
@@ -2390,16 +2400,6 @@
                 <span id="attendanceNo">Өкінішке қарай, қатыса алмаймын</span>
               </label>
             </div>
-          </div>
-
-          <input type="hidden" id="guestCount" name="guestCount" value="1">
-            </div>
-            
-          </div>
-
-          <div>
-            <div class="field-label" id="commentLabel">Тілек немесе ескерту <span style="font-weight:400">(міндетті емес)</span></div>
-            <textarea class="input" name="comment" id="comment" placeholder="Қаласаңыз, қысқаша тілек немесе ескерту қалдырыңыз"></textarea>
           </div>
 
           <button class="primary-btn" type="submit" id="submitText">Жауапты жіберу</button>
@@ -2450,11 +2450,12 @@
         dateText:'04 қазан 2026',
         weekdayText:'Жексенбі',
         venueLabel:'Өтетін орны',
+        venueMain:'«Kerege» банкет залы',
         venueText:'Астана қаласы<br>Қабанбай батыр даңғылы, 19/1',
         mapText:'Картаны ашу',
         dressCodeLabel:'Киім үлгісі',
         dressCodeTitle:'Ұлттық нақыш',
-        dressCodeText:'Ұлттық киімдер мен қазақы әшекейлер құпталады.',
+        dressCodeText:'Ұлттық киім элементтері немесе қазақы әшекейлер',
         calendarTitle:'Мерейлі күн',
         calendarMonth:'Қазан 2026',
         dow:['дс','сс','ср','бс','жм','сб','жс'],
@@ -2468,8 +2469,6 @@
         attendanceYes:'Міндетті түрде келемін',
         attendanceFamily:'Жұбыммен / отбасыммен келемін',
         attendanceNo:'Өкінішке қарай, қатыса алмаймын',
-        commentLabel:'Тілек немесе ескерту <span style="font-weight:400">(міндетті емес)</span>',
-        commentPlaceholder:'Қаласаңыз, қысқаша тілек немесе ескерту қалдырыңыз',
         submitText:'Жауапты жіберу',
         validation:'Аты-жөніңізді және қатысу мәртебесін толтырыңыз.',
         sending:'Жіберіліп жатыр…',
@@ -2502,11 +2501,12 @@
         dateText:'04 октября 2026',
         weekdayText:'Воскресенье',
         venueLabel:'Место проведения',
+        venueMain:'«Kerege» банкетный зал',
         venueText:'г. Астана<br>проспект Кабанбай батыра, 19/1',
         mapText:'Открыть карту',
         dressCodeLabel:'Дресс-код',
         dressCodeTitle:'Национальный стиль',
-        dressCodeText:'Приветствуются национальные костюмы и украшения.',
+        dressCodeText:'Элементы национальной одежды или казахские украшения',
         calendarTitle:'Дата нашего праздника',
         calendarMonth:'Октябрь 2026',
         dow:['пн','вт','ср','чт','пт','сб','вс'],
@@ -2520,8 +2520,6 @@
         attendanceYes:'Да, обязательно буду',
         attendanceFamily:'Буду с семьёй / спутником',
         attendanceNo:'К сожалению, не смогу присутствовать',
-        commentLabel:'Пожелание или комментарий <span style="font-weight:400">(необязательно)</span>',
-        commentPlaceholder:'Если хотите, оставьте несколько тёплых слов или комментарий',
         submitText:'Отправить ответ',
         validation:'Укажите имя и выберите вариант участия.',
         sending:'Отправляем…',
@@ -2576,6 +2574,7 @@
       setText('dateText',t.dateText);
       setText('weekdayText',t.weekdayText);
       setText('venueLabel',t.venueLabel);
+      setText('venueMain',t.venueMain);
       setText('venueText',t.venueText,true);
       setText('mapText',t.mapText);
       setText('dressCodeLabel',t.dressCodeLabel);
@@ -2596,8 +2595,6 @@
       setText('attendanceYes',t.attendanceYes);
       setText('attendanceFamily',t.attendanceFamily);
       setText('attendanceNo',t.attendanceNo);
-      setText('commentLabel',t.commentLabel,true);
-      $('comment').placeholder=t.commentPlaceholder;
       setText('submitText',t.submitText);
       setText('footerTitle',t.footerTitle);
       setText('footerBody',t.footerBody);
