@@ -2105,6 +2105,73 @@
       }
     }
 
+  
+    /* ===== Unified event title style ===== */
+    .event-title-card{
+      width:min(500px,92%);
+      margin:8px auto 2px;
+      padding:15px 18px 17px;
+      border-radius:22px;
+      border:1px solid rgba(151,103,72,.16);
+      background:linear-gradient(135deg,rgba(252,248,239,.88),rgba(239,226,204,.78));
+      box-shadow:0 9px 22px rgba(78,58,44,.06);
+      position:relative;
+      overflow:hidden;
+    }
+    .event-title-card::before,
+    .event-title-card::after{
+      content:"";
+      position:absolute;
+      top:50%;
+      width:62px;
+      height:32px;
+      opacity:.11;
+      background:url('./2_photo (2).png') center/contain no-repeat;
+      transform:translateY(-50%);
+      pointer-events:none;
+    }
+    .event-title-card::before{left:-10px}
+    .event-title-card::after{right:-10px;transform:translateY(-50%) scaleX(-1)}
+    .event-eyebrow{
+      display:block;
+      position:relative;
+      z-index:1;
+      margin-bottom:4px;
+      color:#866653;
+      font-size:10px;
+      letter-spacing:.22em;
+      font-weight:800;
+      text-align:center;
+    }
+    .event-main{
+      position:relative;
+      z-index:1;
+      margin:0;
+      font:700 clamp(30px,7.6vw,46px)/1.12 "Noto Serif",serif;
+      color:#76513f;
+      text-align:center;
+      text-wrap:balance;
+    }
+    .event-main-long{
+      font-size:clamp(25px,6vw,38px);
+      line-height:1.18;
+    }
+    .tusau-wrap{display:none !important}
+    .and{
+      margin:10px 0 !important;
+      color:#866653 !important;
+      font-weight:700 !important;
+    }
+    @media(max-width:520px){
+      .event-title-card{
+        width:94%;
+        padding:13px 13px 15px;
+        border-radius:20px;
+      }
+      .event-main{font-size:clamp(29px,9vw,39px)}
+      .event-main-long{font-size:clamp(23px,7vw,31px)}
+    }
+
   </style>
 </head>
 
@@ -2164,9 +2231,14 @@
 
         <div class="child-name">Дінмұхамед</div>
         <div class="hero-kicker" id="heroKicker">БІРІНШІ ҚАДАМ • ҚОС ҚУАНЫШ</div>
-        <div class="tusau-wrap"><span class="tusau-eyebrow" id="tusauEyebrow">ДІНМҰХАМЕДТІҢ</span><div class="tusau" id="tusauTitle">Тұсау кесер</div></div>
+        <div class="event-title-card">
+          <span class="event-eyebrow" id="tusauEyebrow">ДІНМҰХАМЕДТІҢ</span>
+          <div class="event-main" id="tusauTitle">Тұсау кесер</div>
+        </div>
         <div class="and" id="andText">және</div>
-        <div class="hero-title" id="retirementTitle">Анамыздың зейнетке шығу тойы</div>
+        <div class="event-title-card">
+          <div class="event-main event-main-long" id="retirementTitle">Анамыздың зейнетке шығу тойы</div>
+        </div>
 
         <div class="hero-lead" id="heroLead">
           Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>
@@ -2312,10 +2384,7 @@
             </div>
           </div>
 
-          <div class="guest-row">
-            <div>
-              <div class="field-label" id="guestCountLabel">Неше адам болып келесіз?</div>
-              <div class="form-hint" id="guestHint">Өзіңізді қосқанда жалпы адам санын көрсетіңіз.</div>
+          <input type="hidden" id="guestCount" name="guestCount" value="1">
             </div>
             <input class="input" id="guestCount" name="guestCount" type="number" min="1" max="50" value="1">
           </div>
@@ -2391,8 +2460,6 @@
         attendanceYes:'Міндетті түрде келемін',
         attendanceFamily:'Жұбыммен / отбасыммен келемін',
         attendanceNo:'Өкінішке қарай, қатыса алмаймын',
-        guestCountLabel:'Неше адам болып келесіз?',
-        guestHint:'Өзіңізді қосқанда жалпы адам санын көрсетіңіз.',
         commentLabel:'Тілек немесе ескерту <span style="font-weight:400">(міндетті емес)</span>',
         commentPlaceholder:'Қаласаңыз, қысқаша тілек немесе ескерту қалдырыңыз',
         submitText:'Жауапты жіберу',
@@ -2445,8 +2512,6 @@
         attendanceYes:'Да, обязательно буду',
         attendanceFamily:'Буду с семьёй / спутником',
         attendanceNo:'К сожалению, не смогу присутствовать',
-        guestCountLabel:'Сколько человек будет всего?',
-        guestHint:'Укажите общее количество человек вместе с вами.',
         commentLabel:'Пожелание или комментарий <span style="font-weight:400">(необязательно)</span>',
         commentPlaceholder:'Если хотите, оставьте несколько тёплых слов или комментарий',
         submitText:'Отправить ответ',
@@ -2523,8 +2588,6 @@
       setText('attendanceYes',t.attendanceYes);
       setText('attendanceFamily',t.attendanceFamily);
       setText('attendanceNo',t.attendanceNo);
-      setText('guestCountLabel',t.guestCountLabel);
-      setText('guestHint',t.guestHint);
       setText('commentLabel',t.commentLabel,true);
       $('comment').placeholder=t.commentPlaceholder;
       setText('submitText',t.submitText);
@@ -2649,8 +2712,7 @@
     function syncGuestCount(){
       const attendance=(new FormData(form)).get('attendance');
       const decline=attendance==='Өкінішке қарай, қатыса алмаймын';
-      guestCount.disabled=decline;
-      guestCount.value=decline ? 0 : Math.max(1,Number(guestCount.value||1));
+      guestCount.value=decline ? 0 : 1;
     }
     form.querySelectorAll('input[name="attendance"]').forEach(r=>r.addEventListener('change',syncGuestCount));
 
@@ -2675,7 +2737,6 @@
       statusEl.textContent=t.success;
       $('submitText').disabled=false;
       form.reset();
-      guestCount.disabled=false;
       guestCount.value=1;
       submitted=false;
     });
