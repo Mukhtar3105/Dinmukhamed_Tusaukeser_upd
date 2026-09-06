@@ -2616,6 +2616,49 @@
       }
     }
 
+  
+    /* ===== Main information label ===== */
+    .details-main-chip{
+      display:flex !important;
+      width:max-content;
+      max-width:92%;
+      margin:4px auto 20px !important;
+      padding:10px 20px !important;
+      border-radius:999px !important;
+
+      font-size:14px !important;
+      font-weight:800 !important;
+      letter-spacing:.16em !important;
+      line-height:1.2 !important;
+      text-align:center !important;
+
+      color:#76503d !important;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,251,240,.88),
+          rgba(239,223,197,.78)
+        ) !important;
+      border:1px solid rgba(142,99,66,.18) !important;
+      box-shadow:
+        0 7px 18px rgba(78,55,39,.07),
+        inset 0 1px 0 rgba(255,255,255,.76) !important;
+    }
+
+    @media(max-width:520px){
+      .details-main-chip{
+        margin:2px auto 17px !important;
+        padding:9px 18px !important;
+        font-size:13px !important;
+        letter-spacing:.14em !important;
+      }
+
+      #dateText{
+        font-size:clamp(27px,8.4vw,34px) !important;
+        white-space:normal !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -2721,12 +2764,12 @@
         <img class="card-decor decor-shanyrak" src="./8_photo.png" alt="">
         <img class="card-decor decor-wave" src="./4_photo (2).png" alt="">
         <img class="divider-art" src="./2_photo (2).png" alt="">
-        <div class="section-chip" id="detailsChip">Басты ақпарат</div>
+        <div class="section-chip details-main-chip" id="detailsChip">БАСТЫ АҚПАРАТ</div>
 
         <div class="details-grid">
           <div class="detail">
             <div class="detail-label" id="dateLabel">Өтетін күні</div>
-            <div class="detail-main" id="dateText">4 қазан</div>
+            <div class="detail-main" id="dateText">04 қазан 2026</div>
             <div class="detail-sub" id="weekdayText">Жексенбі</div>
           </div>
 
@@ -2758,7 +2801,7 @@
         <img class="divider-art" src="./4_photo (2).png" alt="">
         <img class="card-decor decor-extra-cloud" src="./2_photo (2).png" alt="">
         <img class="card-decor decor-extra-cloud2" src="./3_photo (2).png" alt="">
-        <h2 class="section-title" id="calendarTitle">Той күн</h2>
+        <h2 class="section-title" id="calendarTitle">Той күні</h2>
 
         <div class="calendar">
           <div class="cal-head" id="calendarMonth">Қазан</div>
@@ -2867,9 +2910,9 @@
         inviteBody:'Кішкентай <span class="em">Дінмұхамедтің тұсау кесерін</span> және аяулы Анамыздың маңдай термен атқарған еңбегінің мерейлі белесі — <span class="em">зейнетке шығу тойын</span> бірге атап өткелі отырмыз.<br><br>Осы ерекше күні қуанышымызға ортақтасып, ақ тілегіңіз бен ақ батаңызды арнап, төрімізден орын алсаңыздар — біз үшін үлкен мәртебе.',
         blessingText:'Анамыздың абыройы асқақ, ғұмыры ұзақ болсын!<br>Дінмұхамедтің қадамы нық, жолы ашық болсын!',
         detailsTitle:'',
-        detailsChip:'Басты ақпарат',
+        detailsChip:'БАСТЫ АҚПАРАТ',
         dateLabel:'Өтетін күні',
-        dateText:'4 қазан',
+        dateText:'04 қазан 2026',
         weekdayText:'Жексенбі',
         venueLabel:'Өтетін орны',
         venueMain:'«Kerege» банкет залы',
@@ -2878,7 +2921,7 @@
         dressCodeLabel:'Киім үлгісі',
         dressCodeTitle:'Ұлттық нақыш',
         dressCodeText:'Ұлттық киім элементтері немесе қазақы әшекейлер',
-        calendarTitle:'Той күн',
+        calendarTitle:'Той күні',
         calendarMonth:'Қазан',
         dow:['дс','сс','ср','бс','жм','сб','жс'],
         countTitle:'Мерекелік күнге дейін',
@@ -2918,9 +2961,9 @@
         inviteBody:'С большой радостью приглашаем вас на <span class="em">Тұсау кесер Дінмұхамеда</span> и на наш семейный праздник в честь <span class="em">выхода мамы на пенсию</span>.<br><br>Нам будет очень приятно провести этот день вместе с вами, услышать ваши добрые пожелания и разделить радость за одним дастарханом.',
         blessingText:'Пусть у нашей мамы впереди будет много светлых, спокойных и счастливых лет!<br>Пусть путь Дінмұхамеда будет светлым, а каждый его шаг — уверенным и счастливым!',
         detailsTitle:'',
-        detailsChip:'Основная информация',
+        detailsChip:'ОСНОВНАЯ ИНФОРМАЦИЯ',
         dateLabel:'Дата',
-        dateText:'4 октября',
+        dateText:'04 октября 2026',
         weekdayText:'Воскресенье',
         venueLabel:'Место проведения',
         venueMain:'«Kerege» банкетный зал',
