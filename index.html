@@ -2189,6 +2189,24 @@
       display:none !important;
     }
 
+  
+    /* ===== Customer revision: hero text order ===== */
+    .hero-kicker-after{
+      margin-top:16px !important;
+      margin-bottom:4px !important;
+      padding:0 12px;
+      line-height:1.45;
+      text-align:center;
+    }
+
+    @media(max-width:520px){
+      .hero-kicker-after{
+        margin-top:14px !important;
+        font-size:10px !important;
+        letter-spacing:.14em !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -2247,7 +2265,6 @@
         </div>
 
         <div class="child-name">Дінмұхамед</div>
-        <div class="hero-kicker" id="heroKicker">БІРІНШІ ҚАДАМ • ҚОС ҚУАНЫШ</div>
         <div class="event-title-card">
           <span class="event-eyebrow" id="tusauEyebrow">ДІНМҰХАМЕДТІҢ</span>
           <div class="event-main" id="tusauTitle">Тұсау кесер</div>
@@ -2256,6 +2273,7 @@
         <div class="event-title-card">
           <div class="event-main event-main-long" id="retirementTitle">Анамыздың зейнетке шығу тойы</div>
         </div>
+        <div class="hero-kicker hero-kicker-after" id="heroKicker">БІРІНШІ ҚАДАМ • ҚОС ҚУАНЫШ</div>
 
         <div class="hero-lead" id="heroLead">
           Ардақты ағайын-туыс, құда-жекжат, дос-жаран!<br>
@@ -2304,13 +2322,13 @@
         <div class="details-grid">
           <div class="detail">
             <div class="detail-label" id="dateLabel">Өтетін күні</div>
-            <div class="detail-main" id="dateText">04 қазан 2026</div>
+            <div class="detail-main" id="dateText">04 қазан</div>
             <div class="detail-sub" id="weekdayText">Жексенбі</div>
           </div>
 
           <div class="detail">
             <div class="detail-label" id="venueLabel">Өтетін орны</div>
-            <div class="detail-main" id="venueMain">«Kerege» банкет залы</div>
+            <div class="detail-main" id="venueMain">Kerege банкет залы</div>
             <div class="detail-sub" id="venueText">Астана қаласы<br>Қабанбай батыр даңғылы, 19/1</div>
             <a class="mapbtn"
                href="https://2gis.kz/astana/geo/70000001036720755"
@@ -2339,7 +2357,7 @@
         <h2 class="section-title" id="calendarTitle">Мерейлі күн</h2>
 
         <div class="calendar">
-          <div class="cal-head" id="calendarMonth">Қазан 2026</div>
+          <div class="cal-head" id="calendarMonth">Қазан</div>
           <div class="dow" id="calendarDow"></div>
           <div class="grid" id="calendarGrid"></div>
         </div>
@@ -2447,17 +2465,17 @@
         detailsTitle:'Тойдың жай-жапсары',
         detailsChip:'Басты ақпарат',
         dateLabel:'Өтетін күні',
-        dateText:'04 қазан 2026',
+        dateText:'04 қазан',
         weekdayText:'Жексенбі',
         venueLabel:'Өтетін орны',
-        venueMain:'«Kerege» банкет залы',
+        venueMain:'Kerege банкет залы',
         venueText:'Астана қаласы<br>Қабанбай батыр даңғылы, 19/1',
         mapText:'Картаны ашу',
         dressCodeLabel:'Киім үлгісі',
         dressCodeTitle:'Ұлттық нақыш',
         dressCodeText:'Ұлттық киім элементтері немесе қазақы әшекейлер',
         calendarTitle:'Мерейлі күн',
-        calendarMonth:'Қазан 2026',
+        calendarMonth:'Қазан',
         dow:['дс','сс','ср','бс','жм','сб','жс'],
         countTitle:'Мерекелік күнге дейін',
         labs:['күн','сағат','минут','секунд'],
@@ -2498,17 +2516,17 @@
         detailsTitle:'Где и когда',
         detailsChip:'Основная информация',
         dateLabel:'Дата',
-        dateText:'04 октября 2026',
+        dateText:'04 октября',
         weekdayText:'Воскресенье',
         venueLabel:'Место проведения',
-        venueMain:'«Kerege» банкетный зал',
+        venueMain:'Kerege банкетный зал',
         venueText:'г. Астана<br>проспект Кабанбай батыра, 19/1',
         mapText:'Открыть карту',
         dressCodeLabel:'Дресс-код',
         dressCodeTitle:'Национальный стиль',
         dressCodeText:'Элементы национальной одежды или казахские украшения',
         calendarTitle:'Дата нашего праздника',
-        calendarMonth:'Октябрь 2026',
+        calendarMonth:'Октябрь',
         dow:['пн','вт','ср','чт','пт','сб','вс'],
         countTitle:'До торжества',
         labs:['дней','часов','минут','секунд'],
