@@ -2678,6 +2678,29 @@
       }
     }
 
+  
+    /* ===== Event time ===== */
+    .event-time-note{
+      margin-top:8px;
+      font-size:13px;
+      line-height:1.45;
+      font-weight:600;
+      color:#846555;
+      text-align:center;
+    }
+
+    @media(max-width:520px){
+      #dateText{
+        font-size:clamp(24px,7.5vw,31px) !important;
+        line-height:1.18 !important;
+      }
+
+      .event-time-note{
+        margin-top:7px;
+        font-size:12px;
+      }
+    }
+
   </style>
 </head>
 
@@ -2788,8 +2811,9 @@
         <div class="details-grid">
           <div class="detail">
             <div class="detail-label" id="dateLabel">Өтетін күні</div>
-            <div class="detail-main" id="dateText">04 қазан 2026 жыл</div>
+            <div class="detail-main" id="dateText">04 қазан 2026 жыл 16:00</div>
             <div class="detail-sub" id="weekdayText">Жексенбі</div>
+            <div class="event-time-note" id="eventTimeText">Іс-шараның өту уақыты: 16:00</div>
           </div>
 
           <div class="detail">
@@ -2931,8 +2955,9 @@
         detailsTitle:'',
         detailsChip:'БАСТЫ АҚПАРАТ',
         dateLabel:'Өтетін күні',
-        dateText:'04 қазан 2026 жыл',
+        dateText:'04 қазан 2026 жыл 16:00',
         weekdayText:'Жексенбі',
+        eventTimeText:'Іс-шараның өту уақыты: 16:00',
         venueLabel:'Өтетін орны',
         venueMain:'«Kerege» банкет залы',
         venueText:'Астана қаласы<br>Қабанбай батыр даңғылы, 19/1',
@@ -2982,8 +3007,9 @@
         detailsTitle:'',
         detailsChip:'ОСНОВНАЯ ИНФОРМАЦИЯ',
         dateLabel:'Дата',
-        dateText:'04 октября 2026 года',
+        dateText:'04 октября 2026 года 16:00',
         weekdayText:'Воскресенье',
+        eventTimeText:'Время проведения мероприятия: 16:00',
         venueLabel:'Место проведения',
         venueMain:'«Kerege» банкетный зал',
         venueText:'г. Астана<br>проспект Кабанбай батыра, 19/1',
@@ -3057,6 +3083,7 @@
       setText('dateLabel',t.dateLabel);
       setText('dateText',t.dateText);
       setText('weekdayText',t.weekdayText);
+      setText('eventTimeText',t.eventTimeText);
       setText('venueLabel',t.venueLabel);
       setText('venueMain',t.venueMain);
       setText('venueText',t.venueText,true);
